@@ -22,5 +22,4 @@ std::istream &operator>>(std::istream &in, option &option) {
   option = (Signin::option)choice;
   return in;
 }
-
 }  // namespace Signin

@@ -1,16 +1,15 @@
-#include "Access.h"
+#include "Auth.h"
 
 #include <fstream>
 #include <iostream>
 #include <limits>
 
-std::unordered_map<std::string, AccessLevel::Level> stringToLevel = {
-    {"cashier", AccessLevel::Level::kCashier},
-    {"shiftlead", AccessLevel::Level::kShiftLead},
-    {"managment", AccessLevel::Level::kManagment}};
+std::unordered_map<std::string, Access::Level> stringToLevel = {
+    {"cashier", Access::Level::kCashier},
+    {"shiftlead", Access::Level::kShiftLead},
+    {"managment", Access::Level::kManagment}};
 
-void Access::initAccessCodes(
-    const std::string &filename, AccessLevel::Level &accessLevel) {
+void Auth::initAccessCodes(const std::string &filename, Access::Level &accessLevel) {
   std::fstream inFile(filename, std::ios::in);
   if (!inFile.is_open()) throw std::string("File not open");
 
@@ -29,7 +28,7 @@ void Access::initAccessCodes(
   inFile.close();
 }
 
-bool Access::verified(const std::string &username, const uint32_t &social) {
+bool Auth::verified(const std::string &username, const uint32_t &social) {
   std::unordered_map<std::string, uint32_t>::iterator it = accessCodes_.find(username);
   if (it == accessCodes_.end()) return false;
   if (it->second != social) return false;
@@ -37,9 +36,8 @@ bool Access::verified(const std::string &username, const uint32_t &social) {
 }
 
 bool verifyAccess(
-    const std::string &username, const uint32_t &social,
-    AccessLevel::Level &accessLevel) {
-  Access access;
+    const std::string &username, const uint32_t &social, Access::Level &accessLevel) {
+  Auth access;
   access.initAccessCodes("../api/employee.txt", accessLevel);
   return access.verified(username, social);
 }

@@ -3,12 +3,12 @@
 #include <iostream>
 #include <limits>
 
-#include "../employee/Access.h"
+#include "../employee/Auth.h"
 #include "../employee/Employee.h"
 #include "../employee/Signin.h"
 
 namespace Application {
-void start(std::string &username, uint32_t &social, AccessLevel::Level &accessLevel);
+void start(std::string &username, uint32_t &social, Access::Level &accessLevel);
 }  // namespace Application
 
 #endif  // APPLICATION_H_

@@ -1,7 +1,7 @@
 #include "Application.h"
 
 namespace Application {
-void start(std::string &username, uint32_t &social, AccessLevel::Level &accessLevel) {
+void start(std::string &username, uint32_t &social, Access::Level &accessLevel) {
   Signin::option opt;
   do {
     std::cout << "Sign in: 1\n"

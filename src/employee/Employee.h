@@ -4,15 +4,15 @@
 #include <string>
 #include <unordered_map>
 
-namespace AccessLevel {
+namespace Access {
 enum struct Level { kCashier = 0, kShiftLead, kManagment };
-}  // namespace AccessLevel
+}  // namespace Access
 
 class Employee {
  public:
   Employee(
       const std::string &username, const uint32_t &social,
-      const AccessLevel::Level &accessLevel);
+      const Access::Level &accessLevel);
 
  private:
   Employee(const Employee &rhs) {}
@@ -20,7 +20,7 @@ class Employee {
   Employee &operator=(const Employee &rhs);
   Employee &operator=(Employee &&rhs);
 
-  AccessLevel::Level accessLevel_;
+  Access::Level accessLevel_;
   std::string username_;
   uint32_t social_;
 };
