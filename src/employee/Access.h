@@ -1,5 +1,5 @@
-#ifndef SIGNIN_H_
-#define SIGNIN_H_
+#ifndef ACCESS_H_
+#define ACCESS_H_
 #include <cstdint>
 #include <string>
 #include <unordered_map>
@@ -19,4 +19,4 @@ class Access {
   std::unordered_map<std::string, uint32_t> accessCodes_;
 };
 
-#endif  // SIGNIN_H_
+#endif  // ACCESS_H_
