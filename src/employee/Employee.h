@@ -13,8 +13,8 @@ class Employee {
  private:
   Employee(const Employee &rhs) {}
   Employee(Employee &&rhs) {}
-  Employee &operator=(const Employee &rhs) {}
-  Employee &operator=(Employee &&rhs) {}
+  Employee &operator=(const Employee &rhs);
+  Employee &operator=(Employee &&rhs);
 
   AccessLevel accessLevel_;
   std::string workID_;
