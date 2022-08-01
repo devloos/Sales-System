@@ -8,7 +8,8 @@ enum struct AccessLevel { kCashier = 0, kShiftLead, kManagment };
 class Employee {
  public:
   Employee(
-      const std::string &workID, const uint32_t &social, const AccessLevel &accessLevel);
+      const std::string &username, const uint32_t &social,
+      const AccessLevel &accessLevel);
 
  private:
   Employee(const Employee &rhs) {}
@@ -17,7 +18,7 @@ class Employee {
   Employee &operator=(Employee &&rhs);
 
   AccessLevel accessLevel_;
-  std::string workID_;
+  std::string username_;
   uint32_t social_;
 };
 

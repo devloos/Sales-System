@@ -2,11 +2,12 @@
 
 #include "employee/Access.h"
 #include "employee/Employee.h"
+#include "employee/menu.h"
 
 int main() {
-  Employee employee("cashier", 610644209, AccessLevel::kCashier);
-  if (verifyAccess("cashier", 61044209)) {
-    std::cout << "working";
-  }
+  std::string username;
+  uint32_t social;
+  Signin::input(username, social);
+  if (verifyAccess(username, social)) std::cout << "Welcome";
   return 0;
 }
