@@ -4,7 +4,9 @@
 #include "employee/Employee.h"
 
 int main() {
-  Employee employee("cashier", 421, AccessLevel::kCashier);
-  Access access;
+  Employee employee("cashier", 610644209, AccessLevel::kCashier);
+  if (verifyAccess("cashier", 61044209)) {
+    std::cout << "working";
+  }
   return 0;
 }

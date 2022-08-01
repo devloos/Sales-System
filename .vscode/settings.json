@@ -8,4 +8,7 @@
 	"[cpp]": {
 		"editor.formatOnSave": true
 	},
+	"files.associations": {
+		"iosfwd": "cpp"
+	},
 }

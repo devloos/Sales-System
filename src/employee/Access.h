@@ -4,14 +4,16 @@
 #include <string>
 #include <unordered_map>
 
+bool verifyAccess(const std::string &workID, const uint32_t &social);
+
 class Access {
  public:
   Access() {}
   void initAccessCodes(const std::string &filename);
-  bool accessVerified(const std::string &workID, const uint16_t &social);
+  bool verified(const std::string &workID, const uint32_t &social);
 
  private:
-  std::unordered_map<std::string, uint16_t> accessCodes_;
+  std::unordered_map<std::string, uint32_t> accessCodes_;
 };
 
 #endif  // SIGNIN_H_
