@@ -2,11 +2,13 @@
 
 namespace Signin {
 void input(std::string &username, uint32_t &social) {
-  std::cout << "\n\nSign in\n------------------\n";
-  std::cout << "Username: ";
+  system("clear");
+  std::cout << "Sign in\n------------------\n"
+            << "Username: ";
   std::getline(std::cin, username);
   std::cout << "Social-Security: ";
   std::cin >> social;
+
   if (std::cin.fail()) throw std::string("Invalid integer");
   std::cin.clear();
   std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
