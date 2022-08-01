@@ -1,0 +1,12 @@
+{
+  "env": {
+    "myDefaultIncludePath": ["${workspaceFolder}", "${workspaceFolder}/include"]
+  },
+  "configurations": [
+    { 
+      "name": "mac",
+      "includePath": ["${myDefaultIncludePath}"]
+    }
+  ],
+  "version": 4
+}
