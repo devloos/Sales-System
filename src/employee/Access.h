@@ -4,12 +4,15 @@
 #include <string>
 #include <unordered_map>
 
-bool verifyAccess(const std::string &username, const uint32_t &social);
+#include "Employee.h"
+
+bool verifyAccess(
+    const std::string &username, const uint32_t &social, AccessLevel::Level &accessLevel);
 
 class Access {
  public:
   Access() {}
-  void initAccessCodes(const std::string &filename);
+  void initAccessCodes(const std::string &filename, AccessLevel::Level &accessLevel);
   bool verified(const std::string &username, const uint32_t &social);
 
  private:

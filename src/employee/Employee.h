@@ -2,14 +2,17 @@
 #define EMPLOYEE_H_
 #include <cstdint>
 #include <string>
+#include <unordered_map>
 
-enum struct AccessLevel { kCashier = 0, kShiftLead, kManagment };
+namespace AccessLevel {
+enum struct Level { kCashier = 0, kShiftLead, kManagment };
+}  // namespace AccessLevel
 
 class Employee {
  public:
   Employee(
       const std::string &username, const uint32_t &social,
-      const AccessLevel &accessLevel);
+      const AccessLevel::Level &accessLevel);
 
  private:
   Employee(const Employee &rhs) {}
@@ -17,7 +20,7 @@ class Employee {
   Employee &operator=(const Employee &rhs);
   Employee &operator=(Employee &&rhs);
 
-  AccessLevel accessLevel_;
+  AccessLevel::Level accessLevel_;
   std::string username_;
   uint32_t social_;
 };
