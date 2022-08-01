@@ -34,3 +34,4 @@
 # Custom
 *.DS_Store
 *build/
+*design.md
