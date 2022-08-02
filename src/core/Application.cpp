@@ -26,17 +26,6 @@ void start(std::string &username, uint32_t &social, Access::Level &accessLevel) 
           usleep(2000000);
           break;
         }
-
-        system("clear");
-        int subMenuOption;
-        std::cout << "Initialize System: 1\n"
-                  << "Back to Sign in: 0\n"
-                  << "Option: ";
-        std::cin >> subMenuOption;
-        if (std::cin.fail()) throw std::string("Incorrect input for stream");
-        Buffer::clean(std::cin);
-        if (subMenuOption == 0) continue;
-
         Employee employee(username, social, accessLevel);
         System::init(employee);
         break;
