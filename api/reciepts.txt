@@ -1,0 +1,17 @@
+Carlos Sales System
+4231 NOWHERE BLVD
+WHERE, NO
+-------------------
+11/20/22     1:09PM
+-------------------
+ITEM_THATkd - 14.90
+ITEM_THISkd - 14.90
+ITEM_ANDEkd - 14.90
+
+PAYMENT - VISA 3698
+-------------------
+SUBTOTAL: $
+Tax:      $
+TOTAL:    $
+
+PLEASE COME AGAIN!!
