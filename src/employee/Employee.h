@@ -13,6 +13,7 @@ class Employee {
   Employee(
       const std::string &username, const uint32_t &social,
       const Access::Level &accessLevel);
+  Access::Level getAccess() const;
 
  private:
   Employee(const Employee &rhs) {}

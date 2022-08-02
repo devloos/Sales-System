@@ -2,6 +2,9 @@
 
 #include <unistd.h>
 
+#include "../checkout/Checkout.h"
+#include "../exceptions/Buffer.h"
+
 namespace Application {
 void start(std::string &username, uint32_t &social, Access::Level &accessLevel) {
   Signin::option opt;
@@ -23,8 +26,19 @@ void start(std::string &username, uint32_t &social, Access::Level &accessLevel) 
           usleep(2000000);
           break;
         }
-        // std::cout <<
-        // Checkout::initSystem();
+
+        system("clear");
+        int subMenuOption;
+        std::cout << "Initialize System: 1\n"
+                  << "Back to Sign in: 0\n"
+                  << "Option: ";
+        std::cin >> subMenuOption;
+        if (std::cin.fail()) throw std::string("Incorrect input for stream");
+        Buffer::clean(std::cin);
+        if (subMenuOption == 0) continue;
+
+        Employee employee(username, social, accessLevel);
+        Checkout::init(employee);
         break;
       }
       default: {

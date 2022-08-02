@@ -5,9 +5,7 @@ set(CMAKE_BUILD_TYPE Debug)
 
 project(main)
 
-add_executable(
-  ${PROJECT_NAME} src/core/Main.cpp src/employee/Auth.cpp src/employee/Employee.cpp
-  src/core/Application.cpp src/employee/Signin.cpp src/exceptions/Buffer.cpp)
+add_executable(${PROJECT_NAME} src/main.cpp)
 target_include_directories(${PROJECT_NAME} PUBLIC /include)
 
 # Letting CMake find library
