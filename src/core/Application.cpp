@@ -2,8 +2,8 @@
 
 #include <unistd.h>
 
-#include "../checkout/Checkout.h"
 #include "../exceptions/Buffer.h"
+#include "../system/System.h"
 
 namespace Application {
 void start(std::string &username, uint32_t &social, Access::Level &accessLevel) {
@@ -38,7 +38,7 @@ void start(std::string &username, uint32_t &social, Access::Level &accessLevel) 
         if (subMenuOption == 0) continue;
 
         Employee employee(username, social, accessLevel);
-        Checkout::init(employee);
+        System::init(employee);
         break;
       }
       default: {
