@@ -3,7 +3,7 @@
 namespace System {
 void init(const Employee &employee) {
   if (!initMenu()) return;
-  std::map<std::string, std::string> customers;
+  std::map<std::string, std::string> customers(std::move(initCustomers()));
   std::unordered_map<std::string, float> items;
   std::vector<std::ostringstream> receipts(std::move(initReceipts()));
   std::cin.get();
@@ -48,6 +48,20 @@ std::vector<std::ostringstream> initReceipts() {
   return receipts;
 }
 
-std::map<std::string, std::string> initCustomers() {}
+std::map<std::string, std::string> initCustomers() {
+  std::fstream fin("../api/customers.txt", std::ios::in);
+  if (!fin.is_open()) throw std::string("Customers file not opened");
+
+  std::string name, email;
+  std::map<std::string, std::string> customers;
+  while (!fin.eof()) {
+    std::getline(fin, name);
+    std::getline(fin, email);
+    customers[name] = email;
+  }
+  fin.close();
+  return customers;
+}
+
 std::unordered_map<std::string, float> initItems() {}
 }  // namespace System
