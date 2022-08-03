@@ -13,6 +13,15 @@
 
 namespace System {
 const uint8_t STRING_SIZE_BEFORE_NUM = 20;
+const std::string DELIMITER("PLEASE COME AGAIN!!");
+
+/**
+ * @brief
+ *
+ * @param employee
+ */
+void init(const Employee &employee);
+
 /**
  * @brief
  *
@@ -46,8 +55,14 @@ std::unordered_map<std::string, float> initItems();
  * @brief
  *
  * @param employee
+ * @param items
+ * @param customer
+ * @param receipts
  */
-void init(const Employee &employee);
+void menu(
+    const Employee &employee, std::unordered_map<std::string, float> &items,
+    std::map<std::string, std::string> &customer,
+    std::vector<std::ostringstream> &receipts);
 }  // namespace System
 
 #endif  // SYSTEM_H_

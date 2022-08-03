@@ -10,9 +10,11 @@ void start(std::string &username, uint32_t &social, Access::Level &accessLevel) 
   Signin::option opt;
   do {
     system("clear");
-    std::cout << "Sign in: 1\n"
-              << "Exit: 0\n"
-              << "Option: ";
+    std::cout << "  SIGN IN\n"
+              << "------------\n";
+    std::cout << " Sign in: 1\n"
+              << " Exit:    0\n"
+              << "\n Option:  ";
     std::cin >> opt;
     switch (opt) {
       case Signin::option::kExit: {

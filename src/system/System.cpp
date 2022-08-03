@@ -3,21 +3,20 @@
 namespace System {
 void init(const Employee &employee) {
   if (!initMenu()) return;
-  std::map<std::string, std::string> customers(std::move(initCustomers()));
   std::unordered_map<std::string, float> items(std::move(initItems()));
+  std::map<std::string, std::string> customers(std::move(initCustomers()));
   std::vector<std::ostringstream> receipts(std::move(initReceipts()));
-  for (auto item : items) {
-    std::cout << "Item Name: " << item.first << "\nItem Price: " << item.second << '\n';
-  }
-  std::cin.get();
+  menu(employee, items, customers, receipts);
 }
 
 bool initMenu() {
   system("clear");
   int systemOption;
-  std::cout << "Initialize System: 1\n"
-            << "Back to Sign in: Any Number\n"
-            << "Option: ";
+  std::cout << "         Initialize Menu\n"
+            << "-----------------------------------\n"
+            << "    Initialize System: 1\n"
+            << "    Back to Sign in:   Any Number\n"
+            << "\n    Option:            ";
   std::cin >> systemOption;
   if (std::cin.fail()) throw std::string("Incorrect input for stream");
   Buffer::clean(std::cin);
@@ -30,7 +29,6 @@ std::vector<std::ostringstream> initReceipts() {
   if (!inFile.is_open()) throw std::string("Error initializing Receipts");
 
   std::vector<std::ostringstream> receipts;
-  std::string delimiter("PLEASE COME AGAIN!!");
   std::string line;
   int i = 0;
 
@@ -41,8 +39,7 @@ std::vector<std::ostringstream> initReceipts() {
 
   while (std::getline(inFile, line)) {
     receipts[i] << line << "\n";
-    if (line == delimiter && !inFile.eof()) {
-      receipts[i] << "\n";
+    if (line == DELIMITER && !inFile.eof()) {
       receipts.push_back(std::ostringstream());
       ++i;
     }
@@ -80,5 +77,20 @@ std::unordered_map<std::string, float> initItems() {
     items[itemName] = itemPrice;
   }
   return items;
+}
+
+void menu(
+    const Employee &employee, std::unordered_map<std::string, float> &items,
+    std::map<std::string, std::string> &customer,
+    std::vector<std::ostringstream> &receipts) {
+  system("clear");
+  std::cout << " Sales System\n"
+            << "--------------\n"
+            << " Checkout:  1\n"
+            << " Records:   2\n"
+            << " Inventory: 3\n"
+            << " SIGN OUT:  0\n"
+            << "\n Choice:    ";
+  std::cin.get();
 }
 }  // namespace System
