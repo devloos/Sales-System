@@ -4,8 +4,11 @@ namespace System {
 void init(const Employee &employee) {
   if (!initMenu()) return;
   std::map<std::string, std::string> customers(std::move(initCustomers()));
-  std::unordered_map<std::string, float> items;
+  std::unordered_map<std::string, float> items(std::move(initItems()));
   std::vector<std::ostringstream> receipts(std::move(initReceipts()));
+  for (auto item : items) {
+    std::cout << "Item Name: " << item.first << "\nItem Price: " << item.second << '\n';
+  }
   std::cin.get();
 }
 
@@ -63,5 +66,19 @@ std::map<std::string, std::string> initCustomers() {
   return customers;
 }
 
-std::unordered_map<std::string, float> initItems() {}
+std::unordered_map<std::string, float> initItems() {
+  std::fstream fin("../api/inventory.txt", std::ios::in);
+  if (!fin.is_open()) throw std::string("Inventory file did not open");
+
+  std::unordered_map<std::string, float> items;
+  std::string itemName;
+  float itemPrice;
+  while (!fin.eof()) {
+    std::getline(fin, itemName);
+    fin >> itemPrice;
+    Buffer::clean(fin);
+    items[itemName] = itemPrice;
+  }
+  return items;
+}
 }  // namespace System
