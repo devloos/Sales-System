@@ -33,7 +33,7 @@ std::map<std::string, std::string> initCustomers();
  *
  * @return std::vector<std::ostringstream>
  */
-std::vector<std::ostringstream> initReciepts();
+std::vector<std::ostringstream> initReceipts();
 
 /**
  * @brief
