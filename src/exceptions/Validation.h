@@ -13,7 +13,7 @@ const int TWO_SECONDS = 2000000;
  *
  * @param e
  */
-void invalid(const std::string &e);
+void Log(const std::string &e);
 }  // namespace Validation
 
 #endif  // VALIDATION_H_

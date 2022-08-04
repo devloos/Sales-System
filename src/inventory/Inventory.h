@@ -2,6 +2,7 @@
 #define INVENTORY_H_
 #include <unistd.h>
 
+#include <iomanip>
 #include <iostream>
 #include <string>
 #include <unordered_map>
@@ -32,7 +33,28 @@ void start(std::unordered_map<std::string, float> &items);
  */
 void viewInventory(const std::unordered_map<std::string, float> &items);
 
+/**
+ * @brief
+ *
+ * @param items
+ */
 void addItem(std::unordered_map<std::string, float> &items);
+
+/**
+ * @brief
+ *
+ * @param keys
+ * @param items
+ */
+int AutoComplete(
+    const std::string &keys, const std::unordered_map<std::string, float> &items);
+
+/**
+ * @brief
+ *
+ * @param items
+ */
+void deleteItem(std::unordered_map<std::string, float> &items);
 
 /**
  * @brief

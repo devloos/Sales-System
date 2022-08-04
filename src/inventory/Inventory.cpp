@@ -27,13 +27,14 @@ void start(std::unordered_map<std::string, float> &items) {
         break;
       }
       case Inventory::Option::kDeleteItem: {
+        deleteItem(items);
         break;
       }
       case Inventory::Option::kModifyPrice: {
         break;
       }
       default: {
-        Validation::invalid("INVALID OPTION! TRY AGAIN\n");
+        Validation::Log("INVALID OPTION! TRY AGAIN\n");
         break;
       }
     }
@@ -63,7 +64,7 @@ void addItem(std::unordered_map<std::string, float> &items) {
   std::getline(std::cin, itemName);
 
   if (items.find(itemName) != items.end()) {
-    Validation::invalid("ITEM ALREADY IN INVENTORY!!\n");
+    Validation::Log("ITEM ALREADY IN INVENTORY!!\n");
     return;
   }
 
@@ -76,6 +77,40 @@ void addItem(std::unordered_map<std::string, float> &items) {
   system("clear");
   std::cout << "Item: " << itemName << " ADDED SUCCESSFULLY!!\n";
   usleep(2000000);
+}
+
+int AutoComplete(
+    const std::string &keys, const std::unordered_map<std::string, float> &items) {
+  int count = 0;
+  std::cout << std::left << "\n";
+  for (const auto &item : items) {
+    if (item.first.substr(0, keys.size()) == keys) {
+      std::cout << std::setw(3) << item.first << "\n";
+      ++count;
+    }
+  }
+  std::cout << std::right << "\n";
+  return count;
+}
+
+void deleteItem(std::unordered_map<std::string, float> &items) {
+  system("clear");
+  std::string keys, prev;
+  int BufferAutoCompleteNum;
+  do {
+    std::cout << "     Delete Item\n"
+              << "----------------------\n"
+              << "Enter Item Name: " << prev;
+    std::getline(std::cin, keys);
+    prev.append(keys);
+    keys = prev;
+    BufferAutoCompleteNum = AutoComplete(keys, items);
+    if (BufferAutoCompleteNum <= 0) {
+      return;
+    }
+  } while (items.find(keys) == items.end());
+  items.erase(keys);
+  Validation::Log("Item: " + keys + " was successfully erased\n");
 }
 
 std::istream &operator>>(std::istream &in, Inventory::Option &option) {
