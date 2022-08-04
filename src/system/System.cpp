@@ -81,7 +81,7 @@ std::unordered_map<std::string, float> initItems() {
 
 void menu(
     const Employee &employee, std::unordered_map<std::string, float> &items,
-    std::map<std::string, std::string> &customer,
+    std::map<std::string, std::string> &customers,
     std::vector<std::ostringstream> &receipts) {
   System::Option option = System::Option::kSignout;
   do {
@@ -111,14 +111,16 @@ void menu(
         if (employee.getAccess() != Access::Level::kManagment) {
           system("clear");
           std::cout << "ACCESS DENIED: MANAGEMENT ACCESS ONLY!\n";
-          usleep(2000000);
+          usleep(TWO_SECONDS);
+          break;
         }
-        std::cout << int(employee.getAccess());
-        usleep(2000000);
+        // Inventory::start();
         break;
       }
       default: {
-        std::cout << "DEFAULT\n";
+        system("clear");
+        std::cout << "INVALID OPTION! TRY AGAIN\n";
+        usleep(TWO_SECONDS);
         break;
       }
     }

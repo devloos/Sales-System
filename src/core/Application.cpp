@@ -18,7 +18,7 @@ void start(std::string &username, uint32_t &social, Access::Level &accessLevel) 
     std::cin >> opt;
     switch (opt) {
       case Signin::option::kExit: {
-        std::cout << "\nGOODBYE!\n";
+        std::cout << "\n GOODBYE!\n";
         break;
       }
       case Signin::option::kSignin: {
