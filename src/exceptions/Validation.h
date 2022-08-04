@@ -7,6 +7,12 @@
 
 namespace Validation {
 const int TWO_SECONDS = 2000000;
+
+/**
+ * @brief
+ *
+ * @param e
+ */
 void invalid(const std::string &e);
 }  // namespace Validation
 

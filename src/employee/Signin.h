@@ -8,7 +8,22 @@
 
 namespace Signin {
 enum struct option { kExit = 0, kSignin };
+
+/**
+ * @brief
+ *
+ * @param username
+ * @param social
+ */
 void input(std::string &username, uint32_t &social);
+
+/**
+ * @brief
+ *
+ * @param in
+ * @param option
+ * @return std::istream&
+ */
 std::istream &operator>>(std::istream &in, option &option);
 }  // namespace Signin
 

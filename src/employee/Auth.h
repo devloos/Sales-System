@@ -10,12 +10,32 @@
 #include "../exceptions/Buffer.h"
 #include "Employee.h"
 
+/**
+ * @brief
+ *
+ * @param username
+ * @param social
+ * @param accessLevel
+ * @return true
+ * @return false
+ */
 bool VerifiedAccess(
     const std::string &username, const uint32_t &social, Access::Level &accessLevel);
 
 class Auth {
  public:
   Auth() {}
+
+  /**
+   * @brief
+   *
+   * @param filename
+   * @param username
+   * @param social
+   * @param accessLevel
+   * @return true
+   * @return false
+   */
   bool Verified(
       const std::string &filename, const std::string &username, const uint32_t &social,
       Access::Level &accessLevel);

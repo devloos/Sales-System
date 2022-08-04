@@ -38,6 +38,7 @@ void start(std::unordered_map<std::string, float> &items) {
     }
   } while (option != Option::kSystemMenu);
 }
+
 void viewInventory(const std::unordered_map<std::string, float> &items) {
   system("clear");
   std::cout << "{\n";
@@ -51,6 +52,7 @@ void viewInventory(const std::unordered_map<std::string, float> &items) {
   std::cout << "Press Any Key to Exit!\n";
   std::cin.get();
 }
+
 std::istream &operator>>(std::istream &in, Inventory::Option &option) {
   int n;
   in >> n;

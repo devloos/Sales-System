@@ -8,6 +8,13 @@
 #include "../employee/Signin.h"
 
 namespace Application {
+/**
+ * @brief
+ *
+ * @param username
+ * @param social
+ * @param accessLevel
+ */
 void start(std::string &username, uint32_t &social, Access::Level &accessLevel);
 }  // namespace Application
 

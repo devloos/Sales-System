@@ -17,8 +17,28 @@ enum struct Option {
   kDeleteItem,
   kModifyPrice,
 };
+
+/**
+ * @brief
+ *
+ * @param items
+ */
 void start(std::unordered_map<std::string, float> &items);
+
+/**
+ * @brief
+ *
+ * @param items
+ */
 void viewInventory(const std::unordered_map<std::string, float> &items);
+
+/**
+ * @brief
+ *
+ * @param in
+ * @param option
+ * @return std::istream&
+ */
 std::istream &operator>>(std::istream &in, Inventory::Option &option);
 }  // namespace Inventory
 

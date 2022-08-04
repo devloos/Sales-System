@@ -5,7 +5,12 @@
 #include <limits>
 
 namespace Buffer {
+/**
+ * @brief
+ *
+ * @param in
+ */
 void clean(std::istream &in);
-}
+}  // namespace Buffer
 
 #endif  // BUFFER_H_
