@@ -19,6 +19,7 @@ void start(std::unordered_map<std::string, float> &items) {
         break;
       }
       case Inventory::Option::kViewInventory: {
+        viewInventory(items);
         break;
       }
       case Inventory::Option::kAddItem: {
@@ -37,7 +38,19 @@ void start(std::unordered_map<std::string, float> &items) {
     }
   } while (option != Option::kSystemMenu);
 }
-void viewInventory(const std::unordered_map<std::string, float> &items) {}
+void viewInventory(const std::unordered_map<std::string, float> &items) {
+  system("clear");
+  std::cout << "{\n";
+  for (const auto &item : items) {
+    std::cout << "  [\n";
+    std::cout << "    \"Price\": " << item.second << "\n";
+    std::cout << "    \"Item_Name\": \"" << item.first << "\"\n";
+    std::cout << "  ],\n";
+  }
+  std::cout << "}\n\n";
+  std::cout << "Press Any Key to Exit!\n";
+  std::cin.get();
+}
 std::istream &operator>>(std::istream &in, Inventory::Option &option) {
   int n;
   in >> n;
