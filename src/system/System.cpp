@@ -83,14 +83,53 @@ void menu(
     const Employee &employee, std::unordered_map<std::string, float> &items,
     std::map<std::string, std::string> &customer,
     std::vector<std::ostringstream> &receipts) {
-  system("clear");
-  std::cout << " Sales System\n"
-            << "--------------\n"
-            << " Checkout:  1\n"
-            << " Records:   2\n"
-            << " Inventory: 3\n"
-            << " SIGN OUT:  0\n"
-            << "\n Choice:    ";
-  std::cin.get();
+  System::Option option = System::Option::kSignout;
+  do {
+    system("clear");
+    std::cout << " Sales System\n"
+              << "--------------\n"
+              << " Checkout:  1\n"
+              << " Records:   2\n"
+              << " Inventory: 3\n"
+              << " SIGN OUT:  0\n"
+              << "\n Choice:    ";
+    std::cin >> option;
+    switch (option) {
+      case System::Option::kSignout: {
+        std::cout << "SIGN OUT\n";
+        break;
+      }
+      case System::Option::kCheckout: {
+        std::cout << "CHECKOUT\n";
+        break;
+      }
+      case System::Option::kRecords: {
+        std::cout << "RECORDS\n";
+        break;
+      }
+      case System::Option::kInventory: {
+        if (employee.getAccess() != Access::Level::kManagment) {
+          system("clear");
+          std::cout << "ACCESS DENIED: MANAGEMENT ACCESS ONLY!\n";
+          usleep(2000000);
+        }
+        std::cout << int(employee.getAccess());
+        usleep(2000000);
+        break;
+      }
+      default: {
+        std::cout << "DEFAULT\n";
+        break;
+      }
+    }
+  } while (option != System::Option::kSignout);
+}
+
+std::istream &operator>>(std::istream &in, System::Option &option) {
+  int n;
+  in >> n;
+  Buffer::clean(in);
+  option = (System::Option)n;
+  return in;
 }
 }  // namespace System

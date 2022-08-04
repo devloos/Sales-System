@@ -20,7 +20,6 @@ void input(std::string &username, uint32_t &social) {
 std::istream &operator>>(std::istream &in, option &option) {
   int choice;
   in >> choice;
-  if (in.fail()) throw std::string("incorrect input in stream");
   Buffer::clean(in);
   option = (Signin::option)choice;
   return in;

@@ -1,5 +1,7 @@
 #ifndef SYSTEM_H_
 #define SYSTEM_H_
+#include <unistd.h>
+
 #include <fstream>
 #include <iostream>
 #include <map>
@@ -14,6 +16,7 @@
 namespace System {
 const uint8_t STRING_SIZE_BEFORE_NUM = 20;
 const std::string DELIMITER("PLEASE COME AGAIN!!");
+enum struct Option { kSignout = 0, kCheckout, kRecords, kInventory };
 
 /**
  * @brief
@@ -63,6 +66,15 @@ void menu(
     const Employee &employee, std::unordered_map<std::string, float> &items,
     std::map<std::string, std::string> &customer,
     std::vector<std::ostringstream> &receipts);
+
+/**
+ * @brief
+ *
+ * @param in
+ * @param option
+ * @return std::istream&
+ */
+std::istream &operator>>(std::istream &in, System::Option &option);
 }  // namespace System
 
 #endif  // SYSTEM_H_

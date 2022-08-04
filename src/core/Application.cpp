@@ -23,7 +23,7 @@ void start(std::string &username, uint32_t &social, Access::Level &accessLevel) 
       }
       case Signin::option::kSignin: {
         Signin::input(username, social);
-        if (!verifyAccess(username, social, accessLevel)) {
+        if (!VerifiedAccess(username, social, accessLevel)) {
           std::cout << "\nCredentials not valid\nTry Again!\n";
           usleep(2000000);
           break;
