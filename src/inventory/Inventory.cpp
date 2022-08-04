@@ -23,6 +23,7 @@ void start(std::unordered_map<std::string, float> &items) {
         break;
       }
       case Inventory::Option::kAddItem: {
+        addItem(items);
         break;
       }
       case Inventory::Option::kDeleteItem: {
@@ -43,14 +44,38 @@ void viewInventory(const std::unordered_map<std::string, float> &items) {
   system("clear");
   std::cout << "{\n";
   for (const auto &item : items) {
-    std::cout << "  [\n";
-    std::cout << "    \"Price\": " << item.second << "\n";
-    std::cout << "    \"Item_Name\": \"" << item.first << "\"\n";
-    std::cout << "  ],\n";
+    std::cout << "  [\n"
+              << "    \"Item_Name\": \"" << item.first << "\"\n"
+              << "    \"Price\": " << item.second << "\n"
+              << "  ],\n";
   }
   std::cout << "}\n\n";
   std::cout << "Press Any Key to Exit!\n";
   std::cin.get();
+}
+
+void addItem(std::unordered_map<std::string, float> &items) {
+  system("clear");
+  std::cout << "    Add Item\n"
+            << "----------------\n"
+            << "Enter Item Name: ";
+  std::string itemName;
+  std::getline(std::cin, itemName);
+
+  if (items.find(itemName) != items.end()) {
+    Validation::invalid("ITEM ALREADY IN INVENTORY!!\n");
+    return;
+  }
+
+  float price = 0.0f;
+  std::cout << "Enter Item Price: ";
+  std::cin >> price;
+  Buffer::clean(std::cin);
+
+  items[itemName] = price;
+  system("clear");
+  std::cout << "Item: " << itemName << " ADDED SUCCESSFULLY!!\n";
+  usleep(2000000);
 }
 
 std::istream &operator>>(std::istream &in, Inventory::Option &option) {

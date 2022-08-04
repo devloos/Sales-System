@@ -32,6 +32,8 @@ void start(std::unordered_map<std::string, float> &items);
  */
 void viewInventory(const std::unordered_map<std::string, float> &items);
 
+void addItem(std::unordered_map<std::string, float> &items);
+
 /**
  * @brief
  *
