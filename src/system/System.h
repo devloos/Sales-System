@@ -1,6 +1,5 @@
 #ifndef SYSTEM_H_
 #define SYSTEM_H_
-#include <unistd.h>
 
 #include <fstream>
 #include <iostream>
@@ -12,12 +11,13 @@
 
 #include "../employee/Employee.h"
 #include "../exceptions/Buffer.h"
+#include "../exceptions/Validation.h"
+#include "../inventory/Inventory.h"
 
 namespace System {
 const uint8_t STRING_SIZE_BEFORE_NUM = 20;
 const std::string DELIMITER("PLEASE COME AGAIN!!");
 enum struct Option { kSignout = 0, kCheckout, kRecords, kInventory };
-const int TWO_SECONDS = 2000000;
 
 /**
  * @brief

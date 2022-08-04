@@ -12,11 +12,11 @@ void init(const Employee &employee) {
 bool initMenu() {
   system("clear");
   int systemOption;
-  std::cout << "         Initialize Menu\n"
-            << "-----------------------------------\n"
-            << "    Initialize System: 1\n"
-            << "    Back to Sign in:   Any Number\n"
-            << "\n    Option:            ";
+  std::cout << "      Initialize Menu\n"
+            << "----------------------------\n"
+            << "   Initialize System: 1\n"
+            << "   Sign Out:          0\n"
+            << "\n   Option:            ";
   std::cin >> systemOption;
   if (std::cin.fail()) throw std::string("Incorrect input for stream");
   Buffer::clean(std::cin);
@@ -109,18 +109,14 @@ void menu(
       }
       case System::Option::kInventory: {
         if (employee.getAccess() != Access::Level::kManagment) {
-          system("clear");
-          std::cout << "ACCESS DENIED: MANAGEMENT ACCESS ONLY!\n";
-          usleep(TWO_SECONDS);
+          Validation::invalid("ACCESS DENIED: MANAGEMENT ACCESS ONLY!\n");
           break;
         }
-        // Inventory::start();
+        Inventory::start(items);
         break;
       }
       default: {
-        system("clear");
-        std::cout << "INVALID OPTION! TRY AGAIN\n";
-        usleep(TWO_SECONDS);
+        Validation::invalid("INVALID OPTION! TRY AGAIN\n");
         break;
       }
     }
