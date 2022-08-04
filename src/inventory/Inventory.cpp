@@ -83,7 +83,8 @@ void addItem(std::unordered_map<std::string, float> &items) {
 int AutoComplete(
     const std::string &result, const std::unordered_map<std::string, float> &items) {
   int count = 0;
-  std::cout << std::left << "\n";
+  std::cout << std::left << "Search Queue\n"
+            << "--------------\n";
   for (const auto &item : items) {
     if (item.first.substr(0, result.size()) == result) {
       std::cout << std::setw(3) << item.first << "\n";
@@ -129,6 +130,7 @@ bool Find(
     result = prev;
     if (items.find(result) != items.end()) return true;
 
+    system("clear");
     BufferAutoCompleteNum = AutoComplete(result, items);
   } while (BufferAutoCompleteNum > 0);
   Validation::Log("ITEM " + result + " NOT FOUND!!\n");
