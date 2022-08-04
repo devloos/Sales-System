@@ -59,6 +59,26 @@ void deleteItem(std::unordered_map<std::string, float> &items);
 /**
  * @brief
  *
+ * @param items
+ */
+void modifyItem(std::unordered_map<std::string, float> &items);
+
+/**
+ * @brief
+ *
+ * @param items
+ * @param searchType
+ * @param result
+ * @return true
+ * @return false
+ */
+bool Find(
+    const std::unordered_map<std::string, float> &items, const std::string &searchType,
+    std::string &result);
+
+/**
+ * @brief
+ *
  * @param in
  * @param option
  * @return std::istream&

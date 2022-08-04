@@ -31,6 +31,7 @@ void start(std::unordered_map<std::string, float> &items) {
         break;
       }
       case Inventory::Option::kModifyPrice: {
+        modifyItem(items);
         break;
       }
       default: {
@@ -80,11 +81,11 @@ void addItem(std::unordered_map<std::string, float> &items) {
 }
 
 int AutoComplete(
-    const std::string &keys, const std::unordered_map<std::string, float> &items) {
+    const std::string &result, const std::unordered_map<std::string, float> &items) {
   int count = 0;
   std::cout << std::left << "\n";
   for (const auto &item : items) {
-    if (item.first.substr(0, keys.size()) == keys) {
+    if (item.first.substr(0, result.size()) == result) {
       std::cout << std::setw(3) << item.first << "\n";
       ++count;
     }
@@ -94,23 +95,44 @@ int AutoComplete(
 }
 
 void deleteItem(std::unordered_map<std::string, float> &items) {
+  std::string result;
+  if (!Find(items, "Delete Item", result)) return;
+  items.erase(result);
+  Validation::Log("Item: " + result + " was successfully erased\n");
+}
+
+void modifyItem(std::unordered_map<std::string, float> &items) {
+  std::string result;
+  if (!Find(items, "Modify Price", result)) return;
+  float updatedPrice;
+  std::cout << "Enter New Price: ";
+  std::cin >> updatedPrice;
+  Buffer::clean(std::cin);
+  items.at(result) = updatedPrice;
+  Validation::Log(
+      "Item: " + result + "'s price was updated to: " + std::to_string(updatedPrice) +
+      " \n");
+}
+
+bool Find(
+    const std::unordered_map<std::string, float> &items, const std::string &searchType,
+    std::string &result) {
   system("clear");
-  std::string keys, prev;
+  std::string prev;
   int BufferAutoCompleteNum;
   do {
-    std::cout << "     Delete Item\n"
+    std::cout << "    " + searchType + " \n"
               << "----------------------\n"
               << "Enter Item Name: " << prev;
-    std::getline(std::cin, keys);
-    prev.append(keys);
-    keys = prev;
-    BufferAutoCompleteNum = AutoComplete(keys, items);
-    if (BufferAutoCompleteNum <= 0) {
-      return;
-    }
-  } while (items.find(keys) == items.end());
-  items.erase(keys);
-  Validation::Log("Item: " + keys + " was successfully erased\n");
+    std::getline(std::cin, result);
+    prev.append(result);
+    result = prev;
+    if (items.find(result) != items.end()) return true;
+
+    BufferAutoCompleteNum = AutoComplete(result, items);
+  } while (BufferAutoCompleteNum > 0);
+  Validation::Log("ITEM " + result + " NOT FOUND!!\n");
+  return false;
 }
 
 std::istream &operator>>(std::istream &in, Inventory::Option &option) {
