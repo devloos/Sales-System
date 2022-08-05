@@ -5,7 +5,8 @@ void init(const Employee &employee) {
   if (!initMenu()) return;
   std::unordered_map<std::string, float> items(std::move(initItems()));
   std::map<std::string, std::string> customers(std::move(initCustomers()));
-  std::vector<std::ostringstream> receipts(std::move(initReceipts()));
+  std::vector<Records::Receipt> receipts(std::move(initReceipts()));
+  std::fstream oFile("../api/receipts.txt", std::ios::out);
   menu(employee, items, customers, receipts);
 }
 
@@ -24,25 +25,23 @@ bool initMenu() {
   return true;
 }
 
-std::vector<std::ostringstream> initReceipts() {
+std::vector<Records::Receipt> initReceipts() {
   std::fstream inFile("../api/receipts.txt", std::ios::in);
   if (!inFile.is_open()) throw std::string("Error initializing Receipts");
 
-  std::vector<std::ostringstream> receipts;
+  std::vector<Records::Receipt> receipts;
   std::string line;
   int i = 0;
 
   std::getline(inFile, line);
   line = line.substr(STRING_SIZE_BEFORE_NUM, line.size());
   receipts.reserve(std::stoi(line));
-  if (receipts.capacity() != 0) receipts.push_back(std::ostringstream());
+  if (receipts.capacity() == 0) return receipts;
 
-  while (std::getline(inFile, line)) {
-    receipts[i] << line << "\n";
-    if (line == DELIMITER && !inFile.eof()) {
-      receipts.push_back(std::ostringstream());
-      ++i;
-    }
+  while (!inFile.eof()) {
+    receipts.emplace_back(std::move(Records::Receipt()));
+    receipts[i].read(inFile);
+    ++i;
   }
   inFile.close();
   return receipts;
@@ -82,7 +81,7 @@ std::unordered_map<std::string, float> initItems() {
 void menu(
     const Employee &employee, std::unordered_map<std::string, float> &items,
     std::map<std::string, std::string> &customers,
-    std::vector<std::ostringstream> &receipts) {
+    std::vector<Records::Receipt> &receipts) {
   System::Option option = System::Option::kSignout;
   do {
     system("clear");

@@ -13,10 +13,10 @@
 #include "../exceptions/Buffer.h"
 #include "../exceptions/Validation.h"
 #include "../inventory/Inventory.h"
+#include "../records/Receipt.h"
 
 namespace System {
-const uint8_t STRING_SIZE_BEFORE_NUM = 20;
-const std::string DELIMITER("PLEASE COME AGAIN!!");
+const uint8_t STRING_SIZE_BEFORE_NUM = 23;
 enum struct Option { kSignout = 0, kCheckout, kRecords, kInventory };
 
 /**
@@ -44,9 +44,9 @@ std::map<std::string, std::string> initCustomers();
 /**
  * @brief
  *
- * @return std::vector<std::ostringstream>
+ * @return std::vector<Records::Receipt>
  */
-std::vector<std::ostringstream> initReceipts();
+std::vector<Records::Receipt> initReceipts();
 
 /**
  * @brief
@@ -66,7 +66,7 @@ std::unordered_map<std::string, float> initItems();
 void menu(
     const Employee &employee, std::unordered_map<std::string, float> &items,
     std::map<std::string, std::string> &customer,
-    std::vector<std::ostringstream> &receipts);
+    std::vector<Records::Receipt> &receipts);
 
 /**
  * @brief
