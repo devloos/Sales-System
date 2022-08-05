@@ -8,21 +8,21 @@ std::unordered_map<std::string, Access::Level> stringToLevel = {
 bool Auth::Verified(
     const std::string &filename, const std::string &username, const uint32_t &social,
     Access::Level &accessLevel) {
-  std::fstream inFile(filename, std::ios::in);
-  if (!inFile.is_open()) throw std::string("File not open");
+  std::fstream fin(filename, std::ios::in);
+  if (!fin.is_open()) throw std::string("File not open");
 
   std::string __username, __level;
   uint32_t __social;
-  while (!inFile.eof()) {
-    inFile >> __username >> __social >> __level;
-    Buffer::clean(inFile);
+  while (!fin.eof()) {
+    fin >> __username >> __social >> __level;
+    Buffer::clean(fin);
     if (__username != username || __social != social) {
       continue;
     }
     accessLevel = stringToLevel[__level];
     return true;
   }
-  inFile.close();
+  fin.close();
   return false;
 }
 

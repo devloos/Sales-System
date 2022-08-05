@@ -3,12 +3,12 @@
 namespace Records {
 Receipt::Receipt() {}
 
-void Receipt::read(std::fstream &inFile) {
-  Read::Header(inFile, *this);
-  Read::Time(inFile, *this);
-  Read::Items(inFile, *this);
-  Read::Payment(inFile, *this);
-  Read::Totals(inFile, *this);
+void Receipt::read(std::fstream &fin) {
+  Read::Header(fin, *this);
+  Read::Time(fin, *this);
+  Read::Items(fin, *this);
+  Read::Payment(fin, *this);
+  Read::Totals(fin, *this);
 }
 
 void Receipt::print(std::ostream &os) const {
@@ -35,66 +35,66 @@ void Receipt::print(std::ostream &os) const {
 }
 
 namespace Read {
-void Header(std::fstream &inFile, Receipt &receipt) {
+void Header(std::fstream &fin, Receipt &receipt) {
   std::string line;
   receipt.header_ << "\n";
   for (int i = 0; i < HEADER_LINE_AMOUNT; i++) {
-    std::getline(inFile, line);
+    std::getline(fin, line);
     receipt.header_ << line << '\n';
   }
   return;
 }
 
-void Items(std::fstream &inFile, Receipt &receipt) {
+void Items(std::fstream &fin, Receipt &receipt) {
   std::string itemName, discard;
   float price = 0.0f;
   bool itemsRead = false;
 
   do {
-    inFile >> itemName;
+    fin >> itemName;
     if (itemName == ITEMS_DELIMITER) return;
-    inFile >> discard >> price;
-    Buffer::clean(inFile);
+    fin >> discard >> price;
+    Buffer::clean(fin);
 
     receipt.items_.push_back(std::pair<std::string, float>(itemName, price));
   } while (!itemsRead);
   return;
 }
 
-void Time(std::fstream &inFile, Receipt &receipt) {
+void Time(std::fstream &fin, Receipt &receipt) {
   std::string discard;
-  inFile >> receipt.dateCreated_ >> receipt.timeCreated_;
-  Buffer::clean(inFile);
-  std::getline(inFile, discard);
+  fin >> receipt.dateCreated_ >> receipt.timeCreated_;
+  Buffer::clean(fin);
+  std::getline(fin, discard);
   return;
 }
 
-void Payment(std::fstream &inFile, Receipt &receipt) {
+void Payment(std::fstream &fin, Receipt &receipt) {
   std::string discard;
   std::string strIssuer;
 
-  inFile >> discard >> strIssuer;
+  fin >> discard >> strIssuer;
   receipt.issuer_ = StringToIssuer.at(strIssuer);
-  inFile >> receipt.lastFour_;
+  fin >> receipt.lastFour_;
 
-  Buffer::clean(inFile);
-  std::getline(inFile, discard);
+  Buffer::clean(fin);
+  std::getline(fin, discard);
 }
 
-void Totals(std::fstream &inFile, Receipt &receipt) {
+void Totals(std::fstream &fin, Receipt &receipt) {
   std::string discard;
 
   auto Helper = [&](float &value) {
-    inFile >> discard >> discard >> value;
-    Buffer::clean(inFile);
+    fin >> discard >> discard >> value;
+    Buffer::clean(fin);
   };
 
   Helper(receipt.subtotal_);
   Helper(receipt.tax_);
   Helper(receipt.total_);
 
-  std::getline(inFile, discard);
-  std::getline(inFile, receipt.footer_);
+  std::getline(fin, discard);
+  std::getline(fin, receipt.footer_);
 }
 
 }  // namespace Read

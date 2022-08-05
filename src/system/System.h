@@ -32,28 +32,28 @@ void init(const Employee &employee);
  * @return true
  * @return false
  */
-bool initMenu();
+bool MenuInit();
 
 /**
  * @brief
  *
  * @return std::map<std::string, std::string>
  */
-std::map<std::string, std::string> initCustomers();
+std::map<std::string, std::string> CustomersInit();
 
 /**
  * @brief
  *
  * @return std::vector<Records::Receipt>
  */
-std::vector<Records::Receipt> initReceipts();
+std::vector<Records::Receipt> ReceiptsInit();
 
 /**
  * @brief
  *
  * @return std::unordered_map<std::string, float>
  */
-std::unordered_map<std::string, float> initItems();
+std::unordered_map<std::string, float> ItemsInit();
 
 /**
  * @brief

@@ -2,15 +2,14 @@
 
 namespace System {
 void init(const Employee &employee) {
-  if (!initMenu()) return;
-  std::unordered_map<std::string, float> items(std::move(initItems()));
-  std::map<std::string, std::string> customers(std::move(initCustomers()));
-  std::vector<Records::Receipt> receipts(std::move(initReceipts()));
-  std::fstream oFile("../api/receipts.txt", std::ios::out);
+  if (!MenuInit()) return;
+  std::unordered_map<std::string, float> items(std::move(ItemsInit()));
+  std::map<std::string, std::string> customers(std::move(CustomersInit()));
+  std::vector<Records::Receipt> receipts(std::move(ReceiptsInit()));
   menu(employee, items, customers, receipts);
 }
 
-bool initMenu() {
+bool MenuInit() {
   system("clear");
   int systemOption;
   std::cout << "      Initialize Menu\n"
@@ -25,29 +24,29 @@ bool initMenu() {
   return true;
 }
 
-std::vector<Records::Receipt> initReceipts() {
-  std::fstream inFile("../api/receipts.txt", std::ios::in);
-  if (!inFile.is_open()) throw std::string("Error initializing Receipts");
+std::vector<Records::Receipt> ReceiptsInit() {
+  std::fstream fin("../api/receipts.txt", std::ios::in);
+  if (!fin.is_open()) throw std::string("Error initializing Receipts");
 
   std::vector<Records::Receipt> receipts;
   std::string line;
   int i = 0;
 
-  std::getline(inFile, line);
+  std::getline(fin, line);
   line = line.substr(STRING_SIZE_BEFORE_NUM, line.size());
   receipts.reserve(std::stoi(line));
   if (receipts.capacity() == 0) return receipts;
 
-  while (!inFile.eof()) {
+  while (!fin.eof()) {
     receipts.emplace_back(std::move(Records::Receipt()));
-    receipts[i].read(inFile);
+    receipts[i].read(fin);
     ++i;
   }
-  inFile.close();
+  fin.close();
   return receipts;
 }
 
-std::map<std::string, std::string> initCustomers() {
+std::map<std::string, std::string> CustomersInit() {
   std::fstream fin("../api/customers.txt", std::ios::in);
   if (!fin.is_open()) throw std::string("Customers file not opened");
 
@@ -62,7 +61,7 @@ std::map<std::string, std::string> initCustomers() {
   return customers;
 }
 
-std::unordered_map<std::string, float> initItems() {
+std::unordered_map<std::string, float> ItemsInit() {
   std::fstream fin("../api/inventory.txt", std::ios::in);
   if (!fin.is_open()) throw std::string("Inventory file did not open");
 

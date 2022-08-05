@@ -34,52 +34,52 @@ const std::string ITEMS_DELIMITER = "PAYMENT";
 /**
  * @brief
  *
- * @param inFile
+ * @param fin
  * @param receipt
  */
-void Header(std::fstream &inFile, Receipt &receipt);
+void Header(std::fstream &fin, Receipt &receipt);
 
 /**
  * @brief
  *
- * @param inFile
+ * @param fin
  * @param receipt
  */
-void Items(std::fstream &inFile, Receipt &receipt);
+void Items(std::fstream &fin, Receipt &receipt);
 
 /**
  * @brief
  *
- * @param inFile
+ * @param fin
  * @param receipt
  */
-void Time(std::fstream &inFile, Receipt &receipt);
+void Time(std::fstream &fin, Receipt &receipt);
 
 /**
  * @brief
  *
- * @param inFile
+ * @param fin
  * @param receipt
  */
-void Payment(std::fstream &inFile, Receipt &receipt);
+void Payment(std::fstream &fin, Receipt &receipt);
 
 /**
  * @brief
  *
- * @param inFile
+ * @param fin
  * @param receipt
  */
-void Totals(std::fstream &inFile, Receipt &receipt);
+void Totals(std::fstream &fin, Receipt &receipt);
 }  // namespace Read
 
 class Receipt {
  private:
   // Documentation in Read namespace
-  friend void Read::Header(std::fstream &infile, Receipt &receipt);
-  friend void Read::Items(std::fstream &inFile, Receipt &receipt);
-  friend void Read::Time(std::fstream &inFile, Receipt &receipt);
-  friend void Read::Payment(std::fstream &inFile, Receipt &receipt);
-  friend void Read::Totals(std::fstream &inFile, Receipt &receipt);
+  friend void Read::Header(std::fstream &fin, Receipt &receipt);
+  friend void Read::Items(std::fstream &fin, Receipt &receipt);
+  friend void Read::Time(std::fstream &fin, Receipt &receipt);
+  friend void Read::Payment(std::fstream &fin, Receipt &receipt);
+  friend void Read::Totals(std::fstream &fin, Receipt &receipt);
 
  public:
   /**
@@ -91,9 +91,9 @@ class Receipt {
   /**
    * @brief
    *
-   * @param infile
+   * @param fin
    */
-  void read(std::fstream &infile);
+  void read(std::fstream &fin);
 
   /**
    * @brief

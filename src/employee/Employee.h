@@ -34,14 +34,14 @@ class Employee {
    *
    * @param rhs
    */
-  Employee(const Employee &rhs) {}
+  Employee(const Employee &rhs) = delete;
 
   /**
    * @brief Construct a new Employee object
    *
    * @param rhs
    */
-  Employee(Employee &&rhs) {}
+  Employee(Employee &&rhs) = delete;
 
   /**
    * @brief
@@ -49,7 +49,7 @@ class Employee {
    * @param rhs
    * @return Employee&
    */
-  Employee &operator=(const Employee &rhs);
+  Employee &operator=(const Employee &rhs) = delete;
 
   /**
    * @brief
@@ -57,7 +57,7 @@ class Employee {
    * @param rhs
    * @return Employee&
    */
-  Employee &operator=(Employee &&rhs);
+  Employee &operator=(Employee &&rhs) = delete;
 
   Access::Level accessLevel_;
   std::string username_;
