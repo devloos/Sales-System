@@ -2,26 +2,57 @@
 
 namespace Records {
 Customer::Customer(const char* name, const char* email) {
-  const int NAME_SIZE = (strlen(name) + 1);
-  name_ = new char[NAME_SIZE];
-  memcpy(name_, name, NAME_SIZE);
-  name_[NAME_SIZE] = '\0';
+  if (name != nullptr) {
+    const int NAME_SIZE = (strlen(name) + 1);
+    name_ = new char[NAME_SIZE];
+    memcpy(name_, name, NAME_SIZE);
+    name_[NAME_SIZE] = '\0';
+  }
 
-  const int EMAIL_SIZE = (strlen(email) + 1);
-  email_ = new char[EMAIL_SIZE];
-  memcpy(email_, email, EMAIL_SIZE);
-  email_[EMAIL_SIZE] = '\0';
+  if (email != nullptr) {
+    const int EMAIL_SIZE = (strlen(email) + 1);
+    email_ = new char[EMAIL_SIZE];
+    memcpy(email_, email, EMAIL_SIZE);
+    email_[EMAIL_SIZE] = '\0';
+  }
 }
 
-Customer::Customer(const Customer &customer) {}
-Customer &Customer::operator=(const Customer &customer) {}
+Customer::Customer(const Customer &rhs) { *this = rhs; }
 
-Customer::Customer(Customer &&customer) {}
-Customer &Customer::operator=(Customer &&customer) {}
+Customer &Customer::operator=(const Customer &rhs) {
+  if (this == &rhs) return *this;
+  if (rhs.name_ != nullptr) {
+    const int NAME_SIZE = strlen(rhs.name_);
+    name_ = new char[NAME_SIZE];
+    memcpy(name_, rhs.name_, NAME_SIZE);
+  }
+
+  if (rhs.email_ != nullptr) {
+    const int EMAIL_SIZE = strlen(rhs.email_);
+    email_ = new char[EMAIL_SIZE];
+    memcpy(email_, rhs.email_, EMAIL_SIZE);
+  }
+  return *this;
+}
+
+Customer::Customer(Customer &&rhs) { *this = std::move(rhs); }
+
+Customer &Customer::operator=(Customer &&rhs) {
+  if (this == &rhs) return *this;
+  name_ = rhs.name_;
+  rhs.name_ = nullptr;
+
+  email_ = rhs.email_;
+  rhs.email_ = nullptr;
+
+  return *this;
+}
 
 Customer::~Customer() {
   delete[] name_;
   delete[] email_;
 }
 
+const char* Customer::getName() const { return name_; }
+const char* Customer::getEmail() const { return email_; }
 }  // namespace Records

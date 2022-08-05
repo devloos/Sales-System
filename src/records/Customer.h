@@ -11,7 +11,7 @@ class Customer {
    * @param name
    * @param email
    */
-  Customer(const char* name, const char* email);
+  Customer(const char* name = nullptr, const char* email = nullptr);
 
   /**
    * @brief Construct a new Customer object
@@ -49,11 +49,23 @@ class Customer {
    */
   ~Customer();
 
+  /**
+   * @brief Get the Name object
+   *
+   * @return const char*
+   */
+  const char* getName() const;
+
+  /**
+   * @brief Get the Email object
+   *
+   * @return const char*
+   */
+  const char* getEmail() const;
+
  private:
   char* name_;
   char* email_;
 };
-
-bool operator<(const Customer &lhs, const Customer &rhs);
 }  // namespace Records
 #endif  // CUSTOMER_H_
