@@ -13,6 +13,7 @@
 #include "../exceptions/Buffer.h"
 #include "../exceptions/Validation.h"
 #include "../inventory/Inventory.h"
+#include "../records/Customer.h"
 #include "../records/Receipt.h"
 
 namespace System {
@@ -37,9 +38,9 @@ bool MenuInit();
 /**
  * @brief
  *
- * @return std::map<std::string, std::string>
+ * @return std::map<std::string, Records::Customer>
  */
-std::map<std::string, std::string> CustomersInit();
+std::map<std::string, Records::Customer> CustomersInit();
 
 /**
  * @brief
@@ -65,7 +66,7 @@ std::unordered_map<std::string, float> ItemsInit();
  */
 void menu(
     const Employee &employee, std::unordered_map<std::string, float> &items,
-    std::map<std::string, std::string> &customer,
+    std::map<std::string, Records::Customer> &customer,
     std::vector<Records::Receipt> &receipts);
 
 /**

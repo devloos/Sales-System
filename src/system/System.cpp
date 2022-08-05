@@ -4,7 +4,7 @@ namespace System {
 void init(const Employee &employee) {
   if (!MenuInit()) return;
   std::unordered_map<std::string, float> items(std::move(ItemsInit()));
-  std::map<std::string, std::string> customers(std::move(CustomersInit()));
+  std::map<std::string, Records::Customer> customers(std::move(CustomersInit()));
   std::vector<Records::Receipt> receipts(std::move(ReceiptsInit()));
   menu(employee, items, customers, receipts);
 }
@@ -46,16 +46,17 @@ std::vector<Records::Receipt> ReceiptsInit() {
   return receipts;
 }
 
-std::map<std::string, std::string> CustomersInit() {
+std::map<std::string, Records::Customer> CustomersInit() {
   std::fstream fin("../api/customers.txt", std::ios::in);
   if (!fin.is_open()) throw std::string("Customers file not opened");
 
-  std::string name, email;
-  std::map<std::string, std::string> customers;
+  std::string name, email, uuid;
+  std::map<std::string, Records::Customer> customers;
   while (!fin.eof()) {
+    std::getline(fin, uuid);
     std::getline(fin, name);
     std::getline(fin, email);
-    customers[name] = email;
+    customers[uuid] = Records::Customer(name.c_str(), email.c_str());
   }
   fin.close();
   return customers;
@@ -74,12 +75,13 @@ std::unordered_map<std::string, float> ItemsInit() {
     Buffer::clean(fin);
     items[itemName] = itemPrice;
   }
+  fin.close();
   return items;
 }
 
 void menu(
     const Employee &employee, std::unordered_map<std::string, float> &items,
-    std::map<std::string, std::string> &customers,
+    std::map<std::string, Records::Customer> &customers,
     std::vector<Records::Receipt> &receipts) {
   System::Option option = System::Option::kSignout;
   do {
