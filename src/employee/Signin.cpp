@@ -17,11 +17,11 @@ void input(std::string &username, uint32_t &social) {
   return;
 }
 
-std::istream &operator>>(std::istream &in, option &option) {
+std::istream &operator>>(std::istream &in, Options &option) {
   int choice;
   in >> choice;
   Buffer::clean(in);
-  option = (Signin::option)choice;
+  option = (Signin::Options)choice;
   return in;
 }
 }  // namespace Signin

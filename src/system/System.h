@@ -15,6 +15,7 @@
 #include "../inventory/Inventory.h"
 #include "../records/Customer.h"
 #include "../records/Receipt.h"
+#include "../records/Records.h"
 
 namespace System {
 const uint8_t STRING_SIZE_BEFORE_NUM = 23;

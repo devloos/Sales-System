@@ -7,21 +7,21 @@
 
 namespace Application {
 void start(std::string &username, uint32_t &social, Access::Level &accessLevel) {
-  Signin::option opt;
+  Signin::Options opt;
   do {
     system("clear");
     std::cout << "  SIGN IN\n"
               << "------------\n";
     std::cout << " Sign in: 1\n"
               << " Exit:    0\n"
-              << "\n Option:  ";
+              << "\n Options:  ";
     std::cin >> opt;
     switch (opt) {
-      case Signin::option::kExit: {
+      case Signin::Options::kExit: {
         std::cout << "\n GOODBYE!\n";
         break;
       }
-      case Signin::option::kSignin: {
+      case Signin::Options::kSignin: {
         Signin::input(username, social);
         if (!VerifiedAccess(username, social, accessLevel)) {
           std::cout << "\nCredentials not valid\nTry Again!\n";
@@ -33,12 +33,12 @@ void start(std::string &username, uint32_t &social, Access::Level &accessLevel) 
         break;
       }
       default: {
-        std::cout << "\nOption: " << (int)opt << " is not a valid option\n";
+        std::cout << "\nOptions: " << (int)opt << " is not a valid Options\n";
         usleep(2000000);
         break;
       }
     }
-  } while (opt != Signin::option::kExit);
+  } while (opt != Signin::Options::kExit);
   return;
 }
 

@@ -6,12 +6,6 @@ void init(const Employee &employee) {
   std::unordered_map<std::string, float> items(std::move(ItemsInit()));
   std::map<std::string, Records::Customer> customers(std::move(CustomersInit()));
   std::vector<Records::Receipt> receipts(std::move(ReceiptsInit()));
-  for (const auto &customer : customers) {
-    std::cout << customer.first << "\n"
-              << customer.second.getName() << "\n"
-              << customer.second.getEmail() << "\n\n";
-  }
-  std::cin.get();
   menu(employee, items, customers, receipts);
 }
 
@@ -56,8 +50,12 @@ std::map<std::string, Records::Customer> CustomersInit() {
   std::fstream fin("../api/customers.txt", std::ios::in);
   if (!fin.is_open()) throw std::string("Customers file not opened");
 
-  std::string name, email, uuid, discard;
+  std::string name;
+  std::string email;
+  std::string uuid;
+  std::string discard;
   std::map<std::string, Records::Customer> customers;
+
   while (!fin.eof()) {
     std::getline(fin, uuid);
     std::getline(fin, name);
@@ -111,7 +109,7 @@ void menu(
         break;
       }
       case System::Option::kRecords: {
-        std::cout << "RECORDS\n";
+        Records::start(employee, receipts, customers);
         break;
       }
       case System::Option::kInventory: {

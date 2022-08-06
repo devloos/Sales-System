@@ -7,7 +7,7 @@
 #include <string>
 
 namespace Signin {
-enum struct option { kExit = 0, kSignin };
+enum struct Options { kExit = 0, kSignin };
 
 /**
  * @brief
@@ -24,7 +24,7 @@ void input(std::string &username, uint32_t &social);
  * @param option
  * @return std::istream&
  */
-std::istream &operator>>(std::istream &in, option &option);
+std::istream &operator>>(std::istream &in, Options &option);
 }  // namespace Signin
 
 #endif  // SIGNIN_H_
