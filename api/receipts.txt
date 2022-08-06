@@ -1,7 +1,7 @@
    Number of receipts: 3
    Carlos Sales System
 4231 NOWHERE BLVD WHERE, NO
--------------------
+---------------------------
 11/20/22           1:09PM
 ---------------------------
 ITEM_THATkd - 14.9
@@ -17,7 +17,7 @@ TOTAL:          $ 21.3
    PLEASE COME AGAIN!!
    Carlos Sales System
 4231 NOWHERE BLVD WHERE, NO
--------------------
+---------------------------
 11/20/22           1:09PM
 ---------------------------
 ITEM_THATkd - 14.9
@@ -33,7 +33,647 @@ TOTAL:          $ 21.3
    PLEASE COME AGAIN!!
    Carlos Sales System
 4231 NOWHERE BLVD WHERE, NO
--------------------
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    AMEX 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    AMEX 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    AMEX 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    AMEX 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    AMEX 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    AMEX 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    AMEX 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    AMEX 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    AMEX 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    AMEX 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    AMEX 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    AMEX 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    AMEX 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    AMEX 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    AMEX 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+11/20/22           1:09PM
+---------------------------
+ITEM_THATkd - 14.9
+ITEM_THISkd - 14.9
+ITEM_ANDEkd - 14.9
+
+PAYMENT     -    Visa 3698
+---------------------------
+SUBTOTAL:       $ 13.2
+TAX:            $ 16.44
+TOTAL:          $ 21.3
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
 11/20/22           1:09PM
 ---------------------------
 ITEM_THATkd - 14.9

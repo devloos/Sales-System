@@ -1,6 +1,7 @@
 #ifndef RECORDS_H_
 #define RECORDS_H_
 #include <iomanip>
+#include <iostream>
 #include <map>
 #include <string>
 #include <vector>
