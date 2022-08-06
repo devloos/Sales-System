@@ -28,6 +28,9 @@ void start(
         break;
       }
       case Options::kAddCustomer: {
+        std::string id = GenerateId();
+        std::cout << id << "\n";
+        std::cin.get();
         break;
       }
       case Options::kRemoveCustomer: {
@@ -39,6 +42,8 @@ void start(
     }
   } while (option != Options::kExit);
 }
+
+void AddCustomer(std::map<std::string, Customer> &customers) {}
 namespace Print {
 void receipts(const std::vector<Receipt> &receipts) {
   int i = 0;
@@ -94,4 +99,29 @@ bool AnotherFive() {
   return true;
 }
 }  // namespace Print
+
+std::string GenerateId() {
+  std::string _id;
+  char c;
+  srand(time(NULL));
+  for (int i = 0; i < ID_LENGTH; i++) {
+    if (rand() % 2) {
+      c = rand() % 25 + 97;
+    } else {
+      c = rand() % 9 + 48;
+    }
+    switch (i) {
+      case 9:
+      case 14:
+      case 19:
+      case 24:
+        c = '-';
+        break;
+      default:
+        break;
+    }
+    _id.push_back(c);
+  }
+  return _id;
+}
 }  // namespace Records

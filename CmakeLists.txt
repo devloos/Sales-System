@@ -11,9 +11,3 @@ add_executable(
   src/system/System.cpp src/inventory/Inventory.cpp src/exceptions/Validation.cpp
   src/records/Receipt.cpp src/records/Customer.cpp src/records/Records.cpp)
 target_include_directories(${PROJECT_NAME} PUBLIC /include)
-
-# Letting CMake find library
-# find_library(${LIB_NAME} ${LIB_TO_FIND} PATHS /tmp/customPath)
-# User explicitly finding library
-# target_include_directories(${PROJECT_NAME} PUBLIC ${LIB_HEADER_FILES})
-# target_link_libraries(${PROJECT_NAME} PUBLIC ${LIB_TO_INCLUDE})

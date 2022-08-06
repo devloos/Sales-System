@@ -35,3 +35,5 @@
 *.DS_Store
 *build/
 *design.md
+*curlpp-0.8.1
+*curl-7.84.0
