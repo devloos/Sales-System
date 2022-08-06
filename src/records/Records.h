@@ -17,6 +17,7 @@ void start(
     const Employee &employee, const std::vector<Receipt> &receipts,
     std::map<std::string, Customer> &customers);
 namespace Print {
+bool AnotherFive();
 void receipts(const std::vector<Receipt> &receipts);
 void customers(const std::map<std::string, Customer> &customers);
 }  // namespace Print
