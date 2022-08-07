@@ -36,9 +36,15 @@ void start(
         break;
       }
       case Options::kRemoveCustomer: {
+        if (employee.getAccess() == Access::Level::kCashier) {
+          Validation::Log("MANAGMENT AND LEAD ACCESS ONLY!!\n");
+          break;
+        }
+        RemoveCustomer(customers);
         break;
       }
       default: {
+        Validation::Log("ENTER NUMBER IN RANGE\n");
         break;
       }
     }
@@ -71,6 +77,22 @@ void AddCustomer(std::map<std::string, Customer> &customers) {
   }
   customers.emplace(GenerateId(), Customer(name.c_str(), email.c_str()));
   Validation::Log("CUSTOMER: " + name + " HAS BEEN ADDED!\n");
+}
+
+void RemoveCustomer(std::map<std::string, Customer> &customers) {
+  system("clear");
+  std::string UUID;
+
+  std::cout << std::setw(30) << "REMOVE CUSTOMER\n"
+            << "------------------------------------------\n"
+            << "UUID: ";
+  std::getline(std::cin, UUID);
+  if (!customers.erase(UUID)) {
+    Validation::Log("CUSTOMER WITH UUID: " + UUID + " WAS NOT FOUND\n");
+    return;
+  }
+  Validation::Log("CUSTOMER WITH UUID: " + UUID + " WAS ERASED\n");
+  return;
 }
 
 namespace Print {

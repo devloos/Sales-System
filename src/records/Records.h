@@ -10,6 +10,7 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <thread>
 #include <vector>
 
 #include "../employee/Employee.h"
@@ -40,6 +41,8 @@ void start(
  * @param customers
  */
 void AddCustomer(std::map<std::string, Customer> &customers);
+
+void RemoveCustomer(std::map<std::string, Customer> &customers);
 
 namespace Print {
 /**
