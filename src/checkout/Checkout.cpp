@@ -91,6 +91,8 @@ void Purchase(
         break;
       }
       case Options::kPurchase: {
+        Finalize();
+        std::cin.get();
         break;
       }
       default: {
@@ -101,9 +103,17 @@ void Purchase(
   } while (option != Options::kDropTransaction);
 }
 
-void Finalize() {}
+void Finalize() { Handle::Receipt(); }
 
 namespace Handle {
+Records::Receipt Receipt() {
+  std::time_t now = time(0);
+  tm* ltm = localtime(&now);
+
+  std::string year = std::to_string(1900 + ltm->tm_year).substr(2, 4);
+  return Records::Receipt();
+}
+
 void Discount(float &total) {
   system("clear");
   float discount;

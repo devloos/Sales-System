@@ -89,6 +89,26 @@ class Receipt {
   Receipt();
 
   /**
+   * @brief Construct a new Receipt object
+   *
+   * @param header
+   * @param footer
+   * @param timeCreated
+   * @param dateCreated
+   * @param lastFour
+   * @param issuer
+   * @param items
+   * @param subtotal
+   * @param tax
+   * @param total
+   */
+  Receipt(
+      std::ostringstream header, std::string footer, std::string timeCreated,
+      std::string dateCreated, u_int16_t lastFour, Issuers issuer,
+      std::vector<std::pair<std::string, float>> items, float subtotal, float tax,
+      float total);
+
+  /**
    * @brief
    *
    * @param fin
@@ -101,6 +121,13 @@ class Receipt {
    * @param os
    */
   void print(std::ostream &os) const;
+
+  /**
+   * @brief Get the Header object
+   *
+   * @return std::ostringstream&
+   */
+  std::ostringstream &getHeader();
 
  private:
   std::ostringstream header_;

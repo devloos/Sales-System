@@ -4,6 +4,7 @@
 
 #include <algorithm>
 #include <cstdint>
+#include <ctime>
 #include <iomanip>
 #include <map>
 #include <random>
@@ -56,7 +57,12 @@ void Purchase(
     std::vector<Records::Receipt> &receipts,
     std::map<std::string, Records::Customer> &customers);
 
+void Finalize();
+
 namespace Handle {
+
+Records::Receipt Receipt();
+
 /**
  * @brief
  *

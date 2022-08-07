@@ -3,6 +3,20 @@
 namespace Records {
 Receipt::Receipt() {}
 
+Receipt::Receipt(
+    std::ostringstream header, std::string footer, std::string timeCreated,
+    std::string dateCreated, u_int16_t lastFour, Issuers issuer,
+    std::vector<std::pair<std::string, float>> items, float subtotal, float tax,
+    float total)
+    : footer_(footer),
+      timeCreated_(timeCreated),
+      dateCreated_(dateCreated),
+      lastFour_(lastFour),
+      issuer_(issuer),
+      items_(items),
+      subtotal_(subtotal),
+      tax_(tax) {}
+
 void Receipt::read(std::fstream &fin) {
   Read::Header(fin, *this);
   Read::Time(fin, *this);
@@ -10,6 +24,8 @@ void Receipt::read(std::fstream &fin) {
   Read::Payment(fin, *this);
   Read::Totals(fin, *this);
 }
+
+std::ostringstream &Receipt::getHeader() { return header_; }
 
 void Receipt::print(std::ostream &os) const {
   os << header_.str();
