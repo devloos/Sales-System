@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <time.h>
+#include <unistd.h>
 
 #include <cstdint>
 #include <iomanip>
@@ -12,6 +13,7 @@
 #include <vector>
 
 #include "../employee/Employee.h"
+#include "../exceptions/Validation.h"
 #include "../templates/Options.h"
 #include "Customer.h"
 #include "Receipt.h"
@@ -19,6 +21,8 @@
 namespace Records {
 enum struct Options { kExit = 0, kReceipts, kCustomers, kAddCustomer, kRemoveCustomer };
 const uint8_t ID_LENGTH = 36;
+const uint8_t THREE_SECONDS = 3;
+const int ONE_SECONDS = 1000000;
 
 /**
  * @brief

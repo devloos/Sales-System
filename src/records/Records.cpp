@@ -13,7 +13,7 @@ void start(
               << "Print Customers: 2\n"
               << "Add Customer:    3\n"
               << "Remove Customer: 4\n"
-              << "System Menu:     0\n"
+              << "System Menu:     0\n\n"
               << "CHOICE:          ";
     std::cin >> option;
     switch (option) {
@@ -28,9 +28,11 @@ void start(
         break;
       }
       case Options::kAddCustomer: {
-        std::string id = GenerateId();
-        std::cout << id << "\n";
-        std::cin.get();
+        if (employee.getAccess() == Access::Level::kCashier) {
+          Validation::Log("MANAGMENT AND LEAD ACCESS ONLY!!\n");
+          break;
+        }
+        AddCustomer(customers);
         break;
       }
       case Options::kRemoveCustomer: {
@@ -43,7 +45,34 @@ void start(
   } while (option != Options::kExit);
 }
 
-void AddCustomer(std::map<std::string, Customer> &customers) {}
+void AddCustomer(std::map<std::string, Customer> &customers) {
+  system("clear");
+  std::string name;
+  std::string email;
+
+  auto header = []() {
+    std::cout << std::setw(23) << "ADD CUSTOMER\n"
+              << "----------------------------------\n";
+  };
+  header();
+  std::cout << "NAME: ";
+  std::getline(std::cin, name);
+  std::cout << "EMAIL: ";
+  std::getline(std::cin, email);
+
+  for (int i = 1; i <= THREE_SECONDS; i++) {
+    system("clear");
+    header();
+    std::cout << "NAME: " << name << "\n"
+              << "EMAIL: " << email << "\n\n";
+    std::cout << "GENERATING ID " << std::setw(i + 1) << std::setfill('.') << '\n'
+              << std::setfill(' ');
+    usleep(ONE_SECONDS);
+  }
+  customers.emplace(GenerateId(), Customer(name.c_str(), email.c_str()));
+  Validation::Log("CUSTOMER: " + name + " HAS BEEN ADDED!\n");
+}
+
 namespace Print {
 void receipts(const std::vector<Receipt> &receipts) {
   int i = 0;

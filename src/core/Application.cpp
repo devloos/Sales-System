@@ -13,8 +13,8 @@ void start(std::string &username, uint32_t &social, Access::Level &accessLevel) 
     std::cout << "  SIGN IN\n"
               << "------------\n";
     std::cout << " Sign in: 1\n"
-              << " Exit:    0\n"
-              << "\n Options:  ";
+              << " Exit:    0\n\n"
+              << " Options: ";
     std::cin >> opt;
     switch (opt) {
       case Signin::Options::kExit: {
