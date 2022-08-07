@@ -175,4 +175,11 @@ std::string GenerateId() {
   }
   return _id;
 }
+std::istream &operator>>(std::istream &in, Options &option) {
+  int n;
+  in >> n;
+  Buffer::clean(in);
+  option = (Options)n;
+  return in;
+}
 }  // namespace Records

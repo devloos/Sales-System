@@ -1,7 +1,12 @@
 #ifndef CHECKOUT_H_
 #define CHECKOUT_H_
+#include <stdlib.h>
+
+#include <algorithm>
+#include <cstdint>
 #include <iomanip>
 #include <map>
+#include <random>
 #include <unordered_map>
 #include <vector>
 
@@ -10,12 +15,21 @@
 #include "../inventory/Inventory.h"
 #include "../records/Customer.h"
 #include "../records/Receipt.h"
+#include "../records/Records.h"
 
-#define SCAN 1
+#define PURCHASE 1
 #define MODIFY 2
 #define EXIT 0
 
 namespace Checkout {
+struct CurrCustomer {
+  std::string uuid_;
+  std::string name_;
+  std::string email_;
+};
+
+enum struct Options { kDropTransaction = 0, kViewItems, kDiscount, kPurchase };
+
 /**
  * @brief
  *
@@ -37,10 +51,53 @@ void start(
  * @param receipts
  * @param customers
  */
-void Scan(
+void Purchase(
     const Employee &employee, std::unordered_map<std::string, float> &items,
     std::vector<Records::Receipt> &receipts,
     std::map<std::string, Records::Customer> &customers);
+
+namespace Handle {
+/**
+ * @brief
+ *
+ * @param CurrCustomer
+ */
+void NewCustomer(Checkout::CurrCustomer &CurrCustomer);
+
+/**
+ * @brief
+ *
+ * @param customers
+ * @param customer
+ */
+void ExistingCustomer(
+    std::map<std::string, Records::Customer> &customers, CurrCustomer &customer);
+/**
+ * @brief
+ *
+ * @param items
+ * @param CartItems
+ */
+void Scan(
+    const std::unordered_map<std::string, float> &items,
+    std::unordered_map<std::string, float> &CartItems);
+
+/**
+ * @brief
+ *
+ * @param CartItems
+ * @return float
+ */
+float Total(const std::unordered_map<std::string, float> &CartItems);
+
+/**
+ * @brief
+ *
+ * @param total
+ */
+void Discount(float &total);
+}  // namespace Handle
+std::istream &operator>>(std::istream &in, Options &option);
 }  // namespace Checkout
 
 #endif  // CHECKOUT_H_

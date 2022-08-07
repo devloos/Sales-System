@@ -15,7 +15,6 @@
 
 #include "../employee/Employee.h"
 #include "../exceptions/Validation.h"
-#include "../templates/Options.h"
 #include "Customer.h"
 #include "Receipt.h"
 
@@ -74,6 +73,15 @@ void customers(const std::map<std::string, Customer> &customers);
  * @return std::string
  */
 std::string GenerateId();
+
+/**
+ * @brief
+ *
+ * @param in
+ * @param option
+ * @return std::istream&
+ */
+std::istream &operator>>(std::istream &in, Options &option);
 }  // namespace Records
 
 #endif  // RECORDS_H_
