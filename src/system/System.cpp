@@ -101,11 +101,10 @@ void menu(
     std::cin >> option;
     switch (option) {
       case System::Option::kSignout: {
-        std::cout << "SIGN OUT\n";
         break;
       }
       case System::Option::kCheckout: {
-        std::cout << "CHECKOUT\n";
+        Checkout::start(employee, items, receipts, customers);
         break;
       }
       case System::Option::kRecords: {

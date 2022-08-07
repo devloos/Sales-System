@@ -9,6 +9,7 @@
 #include <unordered_map>
 #include <vector>
 
+#include "../checkout/Checkout.h"
 #include "../employee/Employee.h"
 #include "../exceptions/Buffer.h"
 #include "../exceptions/Validation.h"
