@@ -17,8 +17,10 @@ Customer::Customer(const char* name, const char* email) {
   }
 }
 
+// copy constructor
 Customer::Customer(const Customer &rhs) { *this = rhs; }
 
+// copy assignment
 Customer &Customer::operator=(const Customer &rhs) {
   if (this == &rhs) return *this;
   if (rhs.name_ != nullptr) {
@@ -35,8 +37,10 @@ Customer &Customer::operator=(const Customer &rhs) {
   return *this;
 }
 
+// move constructor
 Customer::Customer(Customer &&rhs) { *this = std::move(rhs); }
 
+// move constructor
 Customer &Customer::operator=(Customer &&rhs) {
   if (this == &rhs) return *this;
   name_ = rhs.name_;
