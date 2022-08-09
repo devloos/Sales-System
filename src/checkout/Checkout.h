@@ -9,6 +9,7 @@
 #include <map>
 #include <random>
 #include <unordered_map>
+#include <utility>
 #include <vector>
 
 #include "../employee/Employee.h"
@@ -30,6 +31,8 @@ struct CurrCustomer {
 };
 
 enum struct Options { kDropTransaction = 0, kViewItems, kDiscount, kPurchase };
+
+const float TAX_MULTIPLIER = 7.75;
 
 /**
  * @brief
@@ -57,11 +60,13 @@ void Purchase(
     std::vector<Records::Receipt> &receipts,
     std::map<std::string, Records::Customer> &customers);
 
-void Finalize();
+void Finalize(
+    const std::unordered_map<std::string, float> &CartItems, const float &Subtotal);
 
 namespace Handle {
 
-Records::Receipt Receipt();
+Records::Receipt Receipt(
+    const std::unordered_map<std::string, float> CartItemss, const float &Subtotal);
 
 /**
  * @brief

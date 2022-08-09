@@ -46,16 +46,16 @@ void Purchase(
     std::vector<Records::Receipt> &receipts,
     std::map<std::string, Records::Customer> &customers) {
   std::unordered_map<std::string, float> CartItems;
-  const bool NewCustomer = rand() % 2;
+  const bool EXISTING_CUSTOMER = bool(rand() % 4);
   CurrCustomer customer;
   Options option = Options::kDropTransaction;
 
   Handle::Scan(items, CartItems);
-  float total = Handle::Total(CartItems);
-  if (NewCustomer) {
-    Handle::NewCustomer(customer);
-  } else {
+  float Subtotal = Handle::Total(CartItems);
+  if (EXISTING_CUSTOMER) {
     Handle::ExistingCustomer(customers, customer);
+  } else {
+    Handle::NewCustomer(customer);
   }
 
   do {
@@ -65,7 +65,7 @@ void Purchase(
               << "UUID: " << customer.uuid_ << "\n"
               << "NAME: " << customer.name_ << "\n"
               << "EMAIL: " << customer.email_ << "\n"
-              << "PURCHASE TOTAL: " << total << "\n\n"
+              << "PURCHASE TOTAL: " << Subtotal << "\n\n"
               << "           PURCHASE\n"
               << "------------------------------\n"
               << " View Items:               1\n"
@@ -87,11 +87,11 @@ void Purchase(
           Validation::Log("MANGMENT AND LEAD ACCESS ONLY!!!\n");
           break;
         }
-        Handle::Discount(total);
+        Handle::Discount(Subtotal);
         break;
       }
       case Options::kPurchase: {
-        Finalize();
+        Finalize(CartItems, Subtotal);
         std::cin.get();
         break;
       }
@@ -103,18 +103,50 @@ void Purchase(
   } while (option != Options::kDropTransaction);
 }
 
-void Finalize() { Handle::Receipt(); }
+void Finalize(
+    const std::unordered_map<std::string, float> &CartItems, const float &Subtotal) {
+  Handle::Receipt(CartItems, Subtotal);
+}
 
 namespace Handle {
-Records::Receipt Receipt() {
+Records::Receipt Receipt(
+    const std::unordered_map<std::string, float> CartItemss, const float &Subtotal) {
   std::time_t now = time(0);
   tm* ltm = localtime(&now);
 
+  // initializing date
   std::string year = std::to_string(1900 + ltm->tm_year).substr(2, 4);
+  std::string month = std::to_string(1 + ltm->tm_mon);
+  std::string day = std::to_string(ltm->tm_mday);
+
+  // Formating date
+  if (month.size() == 1) month.insert(month.begin(), '0');
+  if (day.size() == 1) day.insert(day.begin(), '0');
+
+  // Formating Time
+  std::string hour = std::to_string(ltm->tm_hour);
+  std::string meta = "AM";
+  if (std::stoi(hour) > 12) meta = "PM";
+
+  // Last four format
+  std::string LastFour;
+  char temp;
+  for (int i = 0; i < 4; i++) {
+    temp = char(rand() % 9 + 48);
+    LastFour.push_back(temp);
+  }
+
+  std::vector<std::pair<std::string, float>> items;
+
+  Records::Issuers Issuer = Records::Issuers(rand() % 4);
+  const float Tax = Subtotal * TAX_MULTIPLIER;
+  const std::string Date = month + '/' + day + '/' + year;
+  const std::string Time = hour + ':' + std::to_string(ltm->tm_min) + meta;
+
   return Records::Receipt();
 }
 
-void Discount(float &total) {
+void Discount(float &Subtotal) {
   system("clear");
   float discount;
   std::cout << "           DISCOUNT\n"
@@ -123,12 +155,12 @@ void Discount(float &total) {
   std::cin >> discount;
   Buffer::clean(std::cin);
 
-  if (discount > total) {
+  if (discount > Subtotal) {
     Validation::Log("INVALID DISCOUNT AMOUNT!!!\n");
     return;
   }
 
-  total -= discount;
+  Subtotal -= discount;
 }
 float Total(const std::unordered_map<std::string, float> &CartItems) {
   float sum = 0.0f;
