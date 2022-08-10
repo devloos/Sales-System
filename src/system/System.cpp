@@ -15,43 +15,31 @@ void Terminate(
     const std::map<std::string, Records::Customer> &customers,
     const std::vector<Records::Receipt> &receipts) {
   std::fstream fout("../api/inventory.txt", std::ios::out);
-
-  {
-    const int SIZE = items.size();
-    int i = 1;
-
-    for (const auto &item : items) {
-      fout << item.first << "\n" << item.second;
-      if (i != SIZE) fout << "\n";
-      ++i;
-    }
+  const int ITEMS_END = items.size();
+  int i = 1;
+  for (const auto &item : items) {
+    fout << item.first << "\n" << item.second;
+    if (i != ITEMS_END) fout << "\n";
+    ++i;
   }
   fout.close();
 
   fout.open("../api/customers.txt", std::ios::out);
-  {
-    const int SIZE = customers.size();
-    int i = 1;
-    for (const auto &customer : customers) {
-      fout << customer.first << "\n"
-           << customer.second.getName() << "\n"
-           << customer.second.getEmail();
-      if (i != SIZE) fout << "\n\n";
-      ++i;
-    }
+  const auto* CUSTOMER_END = &(*(--customers.end()));
+  for (const auto &customer : customers) {
+    fout << customer.first << "\n"
+         << customer.second.getName() << "\n"
+         << customer.second.getEmail();
+    if (&customer != CUSTOMER_END) fout << "\n\n";
   }
   fout.close();
 
-  fout.open("../api/receitps.txt", std::ios::out);
+  fout.open("../api/receipts.txt", std::ios::out);
+  const auto RECEIPTS_END = --receipts.end();
   fout << "   Number of receipts: " << receipts.size() << "\n";
-  {
-    const int SIZE = receipts.size();
-    int i = 1;
-    for (const auto &receipt : receipts) {
-      receipt.print(fout);
-      if (i != SIZE) fout << "\n";
-      ++i;
-    }
+  for (const auto &receipt : receipts) {
+    receipt.print(fout);
+    if (&receipt != &(*RECEIPTS_END)) fout << "\n";
   }
   fout.close();
 }

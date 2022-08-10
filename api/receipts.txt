@@ -1,91 +1,112 @@
-   Number of receipts: 4
+   Number of receipts: 6
    Carlos Sales System
 4231 NOWHERE BLVD WHERE, NO
 ---------------------------
-08/10/22           15:10PM
+08/10/22           16:12PM
 ---------------------------
-Spelt - 11.33
-Gruyere - 1.59
-Nectarines - 14.36
-GreenPepper - 24.9
-ArborioRice - 9.44
-GoatMilk - 19.12
-ButternutPumpkin - 26.69
-Quinoa - 43.65
-Pumpkin - 18.21
-PotatoFlour - 31.72
+Oatmeal  - 2.53
+Jewfish  - 39.94
+Cashews  - 17.35
+Oysters  - 41.65
+Banana  - 2.98
+Star Fruit  - 16.14
+Yogurt  - 18.72
+Wheat  - 2.97
+Cucumber  - 4.69
+Gruyere  - 1.59
 
-PAYMENT     -    Visa 2867
+PAYMENT     -    AMEX 3245
 ---------------------------
-SUBTOTAL:       $ 201.01
-TAX:            $ 15.58
-TOTAL:          $ 216.59
+SUBTOTAL:       $ 148.56
+TAX:            $ 11.51
+TOTAL:          $ 160.07
 
    PLEASE COME AGAIN!!
    Carlos Sales System
 4231 NOWHERE BLVD WHERE, NO
 ---------------------------
-08/10/22           15:10PM
+08/10/22           16:12PM
 ---------------------------
-Bran - 45.90
-Feta - 46.19
-MahiMahi - 36.98
-Cashews - 17.35
-StarFruit - 16.14
-Mackerel - 30.10
-Cherries - 45.80
-EnglishSpinach - 36.60
-Dill - 6.40
-OatFlour - 40.60
-PistachioNut - 44.36
+Annatto Seed  - 11.33
+Brown Flour  - 43.99
+Mahi Mahi  - 36.98
+Horseradish  - 29.91
+Stevia  - 39.57
+Oat Flour  - 40.60
 
-PAYMENT     -    Visa 5213
+PAYMENT     -    MCard 6480
 ---------------------------
-SUBTOTAL:       $ 366.42
-TAX:            $ 28.40
-TOTAL:          $ 394.82
+SUBTOTAL:       $ 202.38
+TAX:            $ 15.68
+TOTAL:          $ 218.06
 
    PLEASE COME AGAIN!!
    Carlos Sales System
 4231 NOWHERE BLVD WHERE, NO
 ---------------------------
-08/10/22           15:10PM
+08/10/22           16:12PM
 ---------------------------
-Kokam - 22.28
-RedPepper - 28.97
-OatFlour - 40.60
-SafflowerOil - 46.68
-KidneyBeans - 25.96
+Redfish  - 49.81
+Coconut Oil  - 39.44
+Borlotti Beans  - 41.12
+Mahi Mahi  - 36.98
+Cucumber  - 4.69
+Wheat  - 2.97
+Blue Cheese  - 14.38
 
-PAYMENT     -    DSC 870
+PAYMENT     -    AMEX 5073
 ---------------------------
-SUBTOTAL:       $ 164.49
-TAX:            $ 12.75
-TOTAL:          $ 177.24
+SUBTOTAL:       $ 189.39
+TAX:            $ 14.68
+TOTAL:          $ 204.07
 
    PLEASE COME AGAIN!!
    Carlos Sales System
 4231 NOWHERE BLVD WHERE, NO
 ---------------------------
-08/10/22           15:27PM
+08/10/22           16:13PM
 ---------------------------
-Banana - 2.98
-Sesame Oil - 45.57
-Cornichons LJKL AKji - 23.66
-Pork - 48.26
-Yogurt - 18.72
-Potato Flour - 31.72
-Barley - 23.98
-Pomegranate - 13.67
-Dill - 6.40
-Cucumber - 4.69
-English Spinach - 36.60
-Jarrahdale Pumpkin - 45.40
+Banana  - 2.98
 
-PAYMENT     -    AMEX 8044
+PAYMENT     -    DSC 4143
 ---------------------------
-SUBTOTAL:       $ 301.65
-TAX:            $ 23.38
-TOTAL:          $ 325.03
+SUBTOTAL:       $ 2.98
+TAX:            $ 0.23
+TOTAL:          $ 3.21
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+08/10/22           16:13PM
+---------------------------
+Potato Flour  - 31.72
+Bran  - 45.90
+Oatmeal  - 2.53
+Cumquat  - 22.10
+Pine Nut  - 41.31
+
+PAYMENT     -    AMEX 3487
+---------------------------
+SUBTOTAL:       $ 143.56
+TAX:            $ 11.13
+TOTAL:          $ 154.69
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+08/10/22           16:13PM
+---------------------------
+Coconut Oil  - 39.44
+Camomile  - 38.58
+Pumpkin  - 18.21
+Eggplant  - 28.80
+
+PAYMENT     -    Visa 2881
+---------------------------
+SUBTOTAL:       $ 125.03
+TAX:            $ 9.69
+TOTAL:          $ 134.72
 
    PLEASE COME AGAIN!!

@@ -68,7 +68,7 @@ void Items(std::fstream &fin, Receipt &receipt) {
 
   do {
     do {
-      std::cin >> temp;
+      fin >> temp;
       if (temp == "-" || temp == ITEMS_DELIMITER) {
         if (temp == ITEMS_DELIMITER) return;
         break;
@@ -80,6 +80,7 @@ void Items(std::fstream &fin, Receipt &receipt) {
     Buffer::clean(fin);
 
     receipt.items_.push_back(std::pair<std::string, float>(name, price));
+    name.clear();
   } while (true);
   return;
 }
