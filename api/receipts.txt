@@ -1,4 +1,4 @@
-   Number of receipts: 6
+   Number of receipts: 17
    Carlos Sales System
 4231 NOWHERE BLVD WHERE, NO
 ---------------------------
@@ -108,5 +108,279 @@ PAYMENT     -    Visa 2881
 SUBTOTAL:       $ 125.03
 TAX:            $ 9.69
 TOTAL:          $ 134.72
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+08/10/22           16:46PM
+---------------------------
+Pine Nut  - 41.31
+Lemon  - 10.13
+Camomile  - 38.58
+Rice Flour  - 50.78
+Coconut Oil  - 39.44
+Amchur  - 36.45
+Red Pepper  - 28.97
+English Spinach  - 36.60
+Pumpkin  - 18.21
+Silverbeet  - 17.34
+Butternut Pumpkin  - 26.69
+Pomegranate  - 13.67
+
+PAYMENT     -    AMEX 1471
+---------------------------
+SUBTOTAL:       $ 358.17
+TAX:            $ 27.76
+TOTAL:          $ 385.93
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+08/10/22           16:49PM
+---------------------------
+Cashews  - 17.35
+Rice Flour  - 50.78
+
+PAYMENT     -    Visa 8671
+---------------------------
+SUBTOTAL:       $ 68.13
+TAX:            $ 5.28
+TOTAL:          $ 73.41
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+08/10/22           16:51PM
+---------------------------
+Lemon  - 10.13
+Cumquat  - 22.10
+Shiitake Mushrooms  - 24.58
+Rice Syrup  - 8.49
+Safflower Oil  - 46.68
+Harissa  - 2.53
+Jewfish  - 39.94
+Eggplant  - 28.80
+Star Fruit  - 16.14
+Pork  - 48.26
+
+PAYMENT     -    MCard 333
+---------------------------
+SUBTOTAL:       $ 247.65
+TAX:            $ 19.19
+TOTAL:          $ 266.84
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+08/10/22           16:52PM
+---------------------------
+Butternut Lettuce  - 17.37
+Blue Cheese  - 14.38
+Red Pepper  - 28.97
+Cavalo  - 45.78
+Sesame Seeds  - 19.90
+Spelt  - 11.33
+Jewfish  - 39.94
+
+PAYMENT     -    DSC 1416
+---------------------------
+SUBTOTAL:       $ 177.67
+TAX:            $ 13.77
+TOTAL:          $ 191.44
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+08/10/22           16:52PM
+---------------------------
+Omega Spread  - 11.57
+Peppercorns  - 33.52
+Eggplant  - 28.80
+Horseradish  - 29.91
+Raspberry  - 43.42
+Jarrahdale Pumpkin  - 45.40
+Annatto Seed  - 11.33
+Oat Flour  - 40.60
+Camomile  - 38.58
+Paprik  - 10.31
+Arborio Rice  - 9.44
+Pork  - 48.26
+Sesame Oil  - 45.57
+Persimmon  - 29.33
+Pomegranate  - 13.67
+
+PAYMENT     -    DSC 7086
+---------------------------
+SUBTOTAL:       $ 439.71
+TAX:            $ 34.08
+TOTAL:          $ 473.79
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+08/10/22           16:52PM
+---------------------------
+Red Pepper  - 28.97
+Amchur  - 36.45
+Beef Stock  - 3.66
+Harissa  - 2.53
+Cucumber  - 4.69
+
+PAYMENT     -    DSC 8244
+---------------------------
+SUBTOTAL:       $ 76.30
+TAX:            $ 5.91
+TOTAL:          $ 82.21
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+08/10/22           16:53PM
+---------------------------
+Bran - 45.90
+Peppercorns - 33.52
+Hijiki - 6.82
+Rice Flour - 50.78
+Saffron - 14.30
+Cumquat - 22.10
+Butternut Lettuce - 17.37
+Mackerel - 30.10
+Lavender Flowers - 10.57
+Tea - 24.60
+Persimmon - 29.33
+Wheatgrass Juice - 36.13
+Coconut Oil - 39.44
+Sesame Seeds - 19.90
+Paprik - 10.31
+Custard Apples - 27.94
+Pistachio Nut - 44.36
+
+PAYMENT     -    MCard 8720
+---------------------------
+SUBTOTAL:       $ 463.47
+TAX:            $ 35.92
+TOTAL:          $ 499.39
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+08/10/22           16:53PM
+---------------------------
+Peppercorns - 33.52
+Persimmon - 29.33
+Lavender Flowers - 10.57
+Coconut Oil - 39.44
+Bok Choy - 18.95
+Kumera - 30.49
+Cumquat - 22.10
+Poppy Seed - 38.30
+Annatto Seed - 11.33
+Feijoa - 46.12
+Buttermilk - 5.23
+Silverbeet - 17.34
+Besan - 39.23
+Blue Cheese - 14.38
+Cherries - 45.80
+English Spinach - 36.60
+
+PAYMENT     -    DSC 2155
+---------------------------
+SUBTOTAL:       $ 438.73
+TAX:            $ 34.00
+TOTAL:          $ 472.73
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+08/10/22           16:53PM
+---------------------------
+Sesame Seeds - 19.90
+Safflower Oil - 46.68
+Shiitake Mushrooms - 24.58
+Mahi Mahi - 36.98
+Amchur - 36.45
+Lavender Flowers - 10.57
+Persimmon - 29.33
+Cornichons - 23.66
+Peas - 46.75
+Pumpkin - 18.21
+Quinoa - 43.65
+Pine Nut - 41.31
+Oysters - 41.65
+
+PAYMENT     -    MCard 3313
+---------------------------
+SUBTOTAL:       $ 419.72
+TAX:            $ 32.53
+TOTAL:          $ 452.25
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+08/10/22           16:53PM
+---------------------------
+Hijiki - 6.82
+Rice Flour - 50.78
+Bran - 45.90
+Potato Flour - 31.72
+Poppy Seed - 38.30
+Persimmon - 29.33
+Pine Nut - 41.31
+Blue Cheese - 14.38
+Redfish - 49.81
+Red Pepper - 28.97
+Oatmeal - 2.53
+Feijoa - 46.12
+Feta - 46.19
+Wheatgrass Juice - 36.13
+Coconut Oil - 39.44
+Cherries - 45.80
+
+PAYMENT     -    AMEX 2716
+---------------------------
+SUBTOTAL:       $ 553.53
+TAX:            $ 42.90
+TOTAL:          $ 596.43
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+08/10/22           16:53PM
+---------------------------
+Raspberry - 43.42
+Harissa - 2.53
+Jarrahdale Pumpkin - 45.40
+Lotus Root - 28.29
+Kumera - 30.49
+Spelt - 11.33
+Lemon - 10.13
+Persimmon - 29.33
+Tea - 24.60
+Butternut Pumpkin - 26.69
+Banana - 2.98
+Redfish - 49.81
+Barley - 23.98
+Green Pepper - 24.90
+Mackerel - 30.10
+English Spinach - 36.60
+Arborio Rice - 9.44
+Kidney Beans - 25.96
+
+PAYMENT     -    Visa 1300
+---------------------------
+SUBTOTAL:       $ 455.98
+TAX:            $ 35.34
+TOTAL:          $ 491.32
 
    PLEASE COME AGAIN!!
