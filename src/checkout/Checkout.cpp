@@ -46,12 +46,13 @@ void Purchase(
     std::vector<Records::Receipt> &receipts,
     std::map<std::string, Records::Customer> &customers) {
   std::unordered_map<std::string, float> CartItems;
+  std::srand(std::time(nullptr));
   const bool EXISTING_CUSTOMER = bool(rand() % 4);
   CurrCustomer customer;
   Options option = Options::kDropTransaction;
 
   Handle::Scan(items, CartItems);
-  float Subtotal = Handle::Total(CartItems);
+  float Subtotal = Handle::Subtotal(CartItems);
   if (EXISTING_CUSTOMER) {
     Handle::ExistingCustomer(customers, customer);
   } else {
@@ -91,9 +92,10 @@ void Purchase(
         break;
       }
       case Options::kPurchase: {
-        Finalize(CartItems, Subtotal);
+        Finalize(CartItems, receipts, EXISTING_CUSTOMER, customers, customer);
+        std::cout << "\nENTER ANY KEY TO RETURN: ";
         std::cin.get();
-        break;
+        return;
       }
       default: {
         Validation::Log("INPUT NOT IN RANGE TRY AGAIN!!\n");
@@ -104,13 +106,22 @@ void Purchase(
 }
 
 void Finalize(
-    const std::unordered_map<std::string, float> &CartItems, const float &Subtotal) {
-  Handle::Receipt(CartItems, Subtotal);
+    const std::unordered_map<std::string, float> &CartItems,
+    std::vector<Records::Receipt> &receipts, const bool &EXISTING_CUSTOMER,
+    std::map<std::string, Records::Customer> &customers, const CurrCustomer &customer) {
+  system("clear");
+  receipts.push_back(Handle::Receipt(CartItems, Handle::Subtotal(CartItems)));
+  if (!EXISTING_CUSTOMER) {
+    customers[customer.uuid_] =
+        Records::Customer(customer.name_.c_str(), customer.email_.c_str());
+    std::cout << "NEW CUSTOMER: " << customer.name_ << " ADDED!!!\n\n";
+  }
+  receipts[receipts.size() - 1].print(std::cout);
 }
 
 namespace Handle {
 Records::Receipt Receipt(
-    const std::unordered_map<std::string, float> CartItemss, const float &Subtotal) {
+    const std::unordered_map<std::string, float> CartItems, const float &Subtotal) {
   std::time_t now = time(0);
   tm* ltm = localtime(&now);
 
@@ -129,21 +140,36 @@ Records::Receipt Receipt(
   if (std::stoi(hour) > 12) meta = "PM";
 
   // Last four format
-  std::string LastFour;
+  std::string strLastFour;
   char temp;
+  std::srand(std::time(nullptr));
   for (int i = 0; i < 4; i++) {
     temp = char(rand() % 9 + 48);
-    LastFour.push_back(temp);
+    strLastFour.push_back(temp);
   }
 
   std::vector<std::pair<std::string, float>> items;
 
+  for (const auto &CartItem : CartItems) {
+    items.push_back(std::make_pair(CartItem.first, CartItem.second));
+  }
+
+  const u_int16_t LastFour = u_int16_t(std::stoi(strLastFour));
   Records::Issuers Issuer = Records::Issuers(rand() % 4);
   const float Tax = Subtotal * TAX_MULTIPLIER;
+  const float Total = Subtotal + Tax;
   const std::string Date = month + '/' + day + '/' + year;
   const std::string Time = hour + ':' + std::to_string(ltm->tm_min) + meta;
+  const char* Footer = "PLEASE COME AGAIN!!";
 
-  return Records::Receipt();
+  Records::Receipt receipt(
+      std::ostringstream(), Footer, Time, Date, LastFour, Issuer, items, Subtotal, Tax,
+      Total);
+
+  receipt.getHeader() << "   Carlos Sales System\n4231 NOWHERE BLVD WHERE, NO\n"
+                      << "---------------------------\n";
+
+  return receipt;
 }
 
 void Discount(float &Subtotal) {
@@ -162,7 +188,8 @@ void Discount(float &Subtotal) {
 
   Subtotal -= discount;
 }
-float Total(const std::unordered_map<std::string, float> &CartItems) {
+
+float Subtotal(const std::unordered_map<std::string, float> &CartItems) {
   float sum = 0.0f;
   for (const auto &item : CartItems) {
     sum += item.second;
@@ -203,6 +230,7 @@ void Scan(
     const std::unordered_map<std::string, float> &items,
     std::unordered_map<std::string, float> &CartItems) {
   if (items.empty()) return;
+  std::srand(std::time(nullptr));
   const uint8_t TOTAL_ITEMS = rand() % 20 + 1;
 
   auto rand_between = [](const int &start, const int &end) {

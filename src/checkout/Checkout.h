@@ -32,7 +32,7 @@ struct CurrCustomer {
 
 enum struct Options { kDropTransaction = 0, kViewItems, kDiscount, kPurchase };
 
-const float TAX_MULTIPLIER = 7.75;
+const float TAX_MULTIPLIER = 0.0775f;
 
 /**
  * @brief
@@ -61,12 +61,20 @@ void Purchase(
     std::map<std::string, Records::Customer> &customers);
 
 void Finalize(
-    const std::unordered_map<std::string, float> &CartItems, const float &Subtotal);
+    const std::unordered_map<std::string, float> &CartItems,
+    std::vector<Records::Receipt> &receipts, const bool &EXISTING_CUSTOMER,
+    std::map<std::string, Records::Customer> &customers, const CurrCustomer &customer);
 
 namespace Handle {
-
+/**
+ * @brief
+ *
+ * @param CartItems
+ * @param Subtotal
+ * @return Records::Receipt
+ */
 Records::Receipt Receipt(
-    const std::unordered_map<std::string, float> CartItemss, const float &Subtotal);
+    const std::unordered_map<std::string, float> CartItems, const float &Subtotal);
 
 /**
  * @brief
@@ -99,7 +107,7 @@ void Scan(
  * @param CartItems
  * @return float
  */
-float Total(const std::unordered_map<std::string, float> &CartItems);
+float Subtotal(const std::unordered_map<std::string, float> &CartItems);
 
 /**
  * @brief

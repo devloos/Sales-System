@@ -15,7 +15,8 @@ Receipt::Receipt(
       issuer_(issuer),
       items_(items),
       subtotal_(subtotal),
-      tax_(tax) {}
+      tax_(tax),
+      total_(total) {}
 
 void Receipt::read(std::fstream &fin) {
   Read::Header(fin, *this);
@@ -40,8 +41,8 @@ void Receipt::print(std::ostream &os) const {
      << " " << lastFour_ << '\n';
   os << "---------------------------\n";
 
-  os << std::setw(16) << "SUBTOTAL:"
-     << "$ " << subtotal_ << '\n'
+  os << std::setw(16) << "SUBTOTAL:" << std::fixed << std::setprecision(2) << "$ "
+     << subtotal_ << '\n'
      << std::setw(16) << "TAX:"
      << "$ " << tax_ << '\n'
      << std::setw(16) << "TOTAL:"
