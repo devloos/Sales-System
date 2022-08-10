@@ -32,6 +32,18 @@ void init(const Employee &employee);
 /**
  * @brief
  *
+ * @param items
+ * @param customers
+ * @param receipts
+ */
+void Terminate(
+    const std::unordered_map<std::string, float> &items,
+    const std::map<std::string, Records::Customer> &customers,
+    const std::vector<Records::Receipt> &receipts);
+
+/**
+ * @brief
+ *
  * @return true
  * @return false
  */

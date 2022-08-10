@@ -11,11 +11,8 @@ namespace Application {
 /**
  * @brief
  *
- * @param username
- * @param social
- * @param accessLevel
  */
-void start(std::string &username, uint32_t &social, Access::Level &accessLevel);
+void start();
 }  // namespace Application
 
 #endif  // APPLICATION_H_

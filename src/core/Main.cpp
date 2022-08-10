@@ -1,11 +1,8 @@
 #include "Application.h"
 
 int main() {
-  std::string username;
-  uint32_t social;
-  Access::Level accessLevel;
   try {
-    Application::start(username, social, accessLevel);
+    Application::start();
   } catch (std::string e) {
     std::cout << e << "\n";
   }

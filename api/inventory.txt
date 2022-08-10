@@ -1,178 +1,178 @@
-Rice Syrup
-8.49
-Shiitake Mushrooms
-24.58
-Potato Flour
-31.72
-Cavalo
-45.78
-Green Pepper
-24.9
-Oysters
-41.65
-Raspberry
-43.42
-Poppy Seed
-38.3
-Lotus Root
-28.29
-Borlotti Beans
-41.12
-Cucumber
-4.69
-Lavender Flowers
-10.57
-Annatto Seed
-11.33
-Rice Flour
-50.78
-Cashews
-17.35
-Pork
-48.26
-Pomegranate
-13.67
-Spelt
-11.33
-Kumera
-30.49
-Lemon
-30.21
-Yogurt
-18.72
-Pistachio Nut
-44.36
-Amchur
-36.45
-Horseradish
-29.91
-Sesame Oil
-45.57
-Harissa
-2.53
-Arborio Rice
-9.44
-Sesame Seeds
-19.90
-Kidney Beans
-25.96
-Rockmelon
-31.3
-Cornichons
-23.66
-Red Cabbage
-50.24
-Oatmeal
-2.53
-Eggplant
-28.8
-Persimmon
-29.33
-Redfish
-49.81
-Wheatgrass Juice
-36.13
-Star Fruit
-16.14
-Nectarines
-14.36
-Butternut Pumpkin
-26.69
-Marigold
-16.94
-Mackerel
-30.1
-Bok Choy
-18.95
-Dill
-6.4
-Banana
-2.98
-Besan
-39.23
-Hijiki
-6.82
-Beef Stock
-3.66
-Butternut Lettuce
-17.37
-Coconut Oil
-39.44
-Wheat
-2.97
-Kokam
-22.28
-Camomile
-38.58
-Red Pepper
-28.97
-Jarrahdale Pumpkin
-45.4
-Paprik
-10.31
-Peas
-46.75
-Mahi Mahi
-36.98
-Brown Flour
-43.99
-Goat Milk
-19.12
-Omega Spread
-11.57
-Cherries
-45.8
-Safflower Oil
-46.68
-Saffron
-14.30
-Corn Tortilla
-7.62
-Quinoa
-43.65
-Peppercorns
-33.52
-Pumpkin
-18.21
-Feijoa
-46.12
-Cumquat
-22.1
-Pine Nut
-41.31
-Stevia
-39.57
-File Powder
-17.90
-Purple Carrot
-41.79
-English Spinach
-36.6
-Barley
-23.98
-Feta
-46.19
-Buttermilk
-5.23
-Oat Flour
-40.60
-Ham
-6.26
-Tea
-24.6
-Slivered Almonds
-14.70
-Jewfish
-39.94
 Edam
 21.44
-Silverbeet
-17.34
 Custard Apples
 27.94
+Buttermilk
+5.23
+File Powder
+17.9
+Dill
+6.4
+Feijoa
+46.12
+Corn Tortilla
+7.62
+Red Pepper
+28.97
+Hijiki
+6.82
+Camomile
+38.58
+Redfish
+49.81
+English Spinach
+36.6
+Persimmon
+29.33
+Cashews
+17.35
 Blue Cheese
 14.38
-Bran
-45.90
+Stevia
+39.57
+Oat Flour
+40.6
+Cumquat
+22.1
+Nectarines
+14.36
+Pumpkin
+18.21
+Omega Spread
+11.57
+Jarrahdale Pumpkin
+45.4
+Saffron
+14.3
+Brown Flour
+43.99
 Gruyere
 1.59
+Silverbeet
+17.34
+Cherries
+45.8
+Mahi Mahi
+36.98
+Mackerel
+30.1
+Peas
+46.75
+Barley
+23.98
+Tea
+24.6
+Wheat
+2.97
+Purple Carrot
+41.79
+Feta
+46.19
+Kokam
+22.28
+Butternut Lettuce
+17.37
+Bran
+45.9
+Beef Stock
+3.66
+Besan
+39.23
+Spelt
+11.33
+Bok Choy
+18.95
+Eggplant
+28.8
+Potato Flour
+31.72
+Safflower Oil
+46.68
+Goat Milk
+19.12
+Cornichons
+23.66
+Ham
+6.26
+Rockmelon
+31.3
+Slivered Almonds
+14.7
+Kidney Beans
+25.96
+Arborio Rice
+9.44
+Harissa
+2.53
+Horseradish
+29.91
+Wheatgrass Juice
+36.13
+Oatmeal
+2.53
+Pomegranate
+13.67
+Cavalo
+45.78
+Marigold
+16.94
+Peppercorns
+33.52
+Pine Nut
+41.31
+Red Cabbage
+50.24
+Cucumber
+4.69
+Pork
+48.26
+Yogurt
+18.72
+Jewfish
+39.94
+Annatto Seed
+11.33
+Sesame Seeds
+19.9
+Sesame Oil
+45.57
+Lavender Flowers
+10.57
+Amchur
+36.45
+Banana
+2.98
+Coconut Oil
+39.44
+Borlotti Beans
+41.12
+Poppy Seed
+38.3
+Butternut Pumpkin
+26.69
+Raspberry
+43.42
+Rice Flour
+50.78
+Green Pepper
+24.9
+Lemon
+30.21
+Shiitake Mushrooms
+24.58
+Kumera
+30.49
+Pistachio Nut
+44.36
+Quinoa
+43.65
+Paprik
+10.31
+Lotus Root
+28.29
+Rice Syrup
+8.49
+Star Fruit
+16.14
+Oysters
+41.65

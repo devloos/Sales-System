@@ -7,6 +7,53 @@ void init(const Employee &employee) {
   std::map<std::string, Records::Customer> customers(std::move(CustomersInit()));
   std::vector<Records::Receipt> receipts(std::move(ReceiptsInit()));
   menu(employee, items, customers, receipts);
+  Terminate(items, customers, receipts);
+}
+
+void Terminate(
+    const std::unordered_map<std::string, float> &items,
+    const std::map<std::string, Records::Customer> &customers,
+    const std::vector<Records::Receipt> &receipts) {
+  std::fstream fout("../api/inventory.txt", std::ios::out);
+
+  {
+    const int SIZE = items.size();
+    int i = 1;
+
+    for (const auto &item : items) {
+      fout << item.first << "\n" << item.second;
+      if (i != SIZE) fout << "\n";
+      ++i;
+    }
+  }
+  fout.close();
+
+  fout.open("../api/customers.txt", std::ios::out);
+  {
+    const int SIZE = customers.size();
+    int i = 1;
+    for (const auto &customer : customers) {
+      fout << customer.first << "\n"
+           << customer.second.getName() << "\n"
+           << customer.second.getEmail();
+      if (i != SIZE) fout << "\n\n";
+      ++i;
+    }
+  }
+  fout.close();
+
+  fout.open("../api/receitps.txt", std::ios::out);
+  fout << "   Number of receipts: " << receipts.size() << "\n";
+  {
+    const int SIZE = receipts.size();
+    int i = 1;
+    for (const auto &receipt : receipts) {
+      receipt.print(fout);
+      if (i != SIZE) fout << "\n";
+      ++i;
+    }
+  }
+  fout.close();
 }
 
 bool MenuInit() {

@@ -6,7 +6,10 @@
 #include "../system/System.h"
 
 namespace Application {
-void start(std::string &username, uint32_t &social, Access::Level &accessLevel) {
+void start() {
+  std::string username;
+  uint32_t social;
+  Access::Level accessLevel;
   Signin::Options opt;
   do {
     system("clear");

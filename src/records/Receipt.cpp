@@ -54,7 +54,6 @@ void Receipt::print(std::ostream &os) const {
 namespace Read {
 void Header(std::fstream &fin, Receipt &receipt) {
   std::string line;
-  receipt.header_ << "\n";
   for (int i = 0; i < HEADER_LINE_AMOUNT; i++) {
     std::getline(fin, line);
     receipt.header_ << line << '\n';
@@ -63,18 +62,25 @@ void Header(std::fstream &fin, Receipt &receipt) {
 }
 
 void Items(std::fstream &fin, Receipt &receipt) {
-  std::string itemName, discard;
-  float price = 0.0f;
-  bool itemsRead = false;
+  std::string name;
+  std::string temp;
+  float price;
 
   do {
-    fin >> itemName;
-    if (itemName == ITEMS_DELIMITER) return;
-    fin >> discard >> price;
+    do {
+      std::cin >> temp;
+      if (temp == "-" || temp == ITEMS_DELIMITER) {
+        if (temp == ITEMS_DELIMITER) return;
+        break;
+      }
+      name.append(temp + ' ');
+    } while (true);
+    temp.pop_back();
+    fin >> price;
     Buffer::clean(fin);
 
-    receipt.items_.push_back(std::pair<std::string, float>(itemName, price));
-  } while (!itemsRead);
+    receipt.items_.push_back(std::pair<std::string, float>(name, price));
+  } while (true);
   return;
 }
 
