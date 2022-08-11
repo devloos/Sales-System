@@ -9,8 +9,8 @@
 
 namespace Application {
 /**
- * @brief
- *
+ * @brief Starts the Appication, handles sign in menu. This does not handle sign in
+ * input though, finally delegates system init
  */
 void start();
 }  // namespace Application

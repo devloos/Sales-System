@@ -26,13 +26,16 @@ const std::unordered_map<Issuers, std::string> IssuerToString = {
     {Issuers::kMastercard, "MCard"},
     {Issuers::kAmericanExpress, "AMEX"}};
 
+// This is done to show compiler that there is a class Receipt that exists
 class Receipt;
+
 namespace Read {
 const uint8_t HEADER_LINE_AMOUNT = 3;
+// Where to stop reading items
 const std::string ITEMS_DELIMITER = "PAYMENT";
 
 /**
- * @brief
+ * @brief Reads header
  *
  * @param fin
  * @param receipt
@@ -40,7 +43,7 @@ const std::string ITEMS_DELIMITER = "PAYMENT";
 void Header(std::fstream &fin, Receipt &receipt);
 
 /**
- * @brief
+ * @brief Reads Items
  *
  * @param fin
  * @param receipt
@@ -48,7 +51,7 @@ void Header(std::fstream &fin, Receipt &receipt);
 void Items(std::fstream &fin, Receipt &receipt);
 
 /**
- * @brief
+ * @brief Reads Time
  *
  * @param fin
  * @param receipt
@@ -56,7 +59,7 @@ void Items(std::fstream &fin, Receipt &receipt);
 void Time(std::fstream &fin, Receipt &receipt);
 
 /**
- * @brief
+ * @brief Reads Payment Type
  *
  * @param fin
  * @param receipt
@@ -64,7 +67,7 @@ void Time(std::fstream &fin, Receipt &receipt);
 void Payment(std::fstream &fin, Receipt &receipt);
 
 /**
- * @brief
+ * @brief Reads all totals
  *
  * @param fin
  * @param receipt
@@ -109,14 +112,14 @@ class Receipt {
       float total);
 
   /**
-   * @brief
+   * @brief Delegates work to entire Read namespace
    *
    * @param fin
    */
   void read(std::fstream &fin);
 
   /**
-   * @brief
+   * @brief Prints this->Receipts
    *
    * @param os
    */

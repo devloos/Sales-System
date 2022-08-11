@@ -35,7 +35,7 @@ enum struct Options { kDropTransaction = 0, kViewItems, kDiscount, kPurchase };
 const float TAX_MULTIPLIER = 0.0775f;
 
 /**
- * @brief
+ * @brief Handles menu and delegation of modify price, and Purchase
  *
  * @param employee
  * @param items
@@ -48,7 +48,8 @@ void start(
     std::map<std::string, Records::Customer> &customers);
 
 /**
- * @brief
+ * @brief Handles purchase menu and delegates the creation of a new customer (50 50
+ * chance), Scan items (random), discount, and View items that customer got
  *
  * @param employee
  * @param items
@@ -60,6 +61,15 @@ void Purchase(
     std::vector<Records::Receipt> &receipts,
     std::map<std::string, Records::Customer> &customers);
 
+/**
+ * @brief Finalizes purchase, this includes pushing new Receipt, and customer if new
+ *
+ * @param CartItems
+ * @param receipts
+ * @param EXISTING_CUSTOMER
+ * @param customers
+ * @param customer
+ */
 void Finalize(
     const std::unordered_map<std::string, float> &CartItems,
     std::vector<Records::Receipt> &receipts, const bool &EXISTING_CUSTOMER,
@@ -67,7 +77,7 @@ void Finalize(
 
 namespace Handle {
 /**
- * @brief
+ * @brief Creates receipts
  *
  * @param CartItems
  * @param Subtotal
@@ -76,7 +86,7 @@ namespace Handle {
 Records::Receipt Receipt(
     const std::unordered_map<std::string, float> CartItems, const float &Subtotal);
 
-/**
+/** Handles input of new customer
  * @brief
  *
  * @param CurrCustomer
@@ -84,7 +94,7 @@ Records::Receipt Receipt(
 void NewCustomer(Checkout::CurrCustomer &CurrCustomer);
 
 /**
- * @brief
+ * @brief Handles random choosing of an existing customer
  *
  * @param customers
  * @param customer
@@ -92,7 +102,7 @@ void NewCustomer(Checkout::CurrCustomer &CurrCustomer);
 void ExistingCustomer(
     std::map<std::string, Records::Customer> &customers, CurrCustomer &customer);
 /**
- * @brief
+ * @brief Random scan of items stores it into @param CartItem
  *
  * @param items
  * @param CartItems
@@ -102,7 +112,7 @@ void Scan(
     std::unordered_map<std::string, float> &CartItems);
 
 /**
- * @brief
+ * @brief Calculates subtotal by sum of cartitems item
  *
  * @param CartItems
  * @return float
@@ -110,7 +120,7 @@ void Scan(
 float Subtotal(const std::unordered_map<std::string, float> &CartItems);
 
 /**
- * @brief
+ * @brief Handles discount
  *
  * @param total
  */

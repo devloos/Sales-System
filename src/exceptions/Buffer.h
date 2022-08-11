@@ -6,7 +6,8 @@
 
 namespace Buffer {
 /**
- * @brief
+ * @brief handles cleaning any type of buffer
+ * if buffer failed then exception is thrown
  *
  * @param in
  */

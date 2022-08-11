@@ -29,6 +29,7 @@ class Employee {
   Access::Level getAccess() const;
 
  private:
+  // ACCESS HAS BEEN DELETED FOR COPYING AND MOVING
   /**
    * @brief Construct a new Employee object
    *
@@ -44,7 +45,7 @@ class Employee {
   Employee(Employee &&rhs) = delete;
 
   /**
-   * @brief
+   * @brief Copy Assignment
    *
    * @param rhs
    * @return Employee&
@@ -52,7 +53,7 @@ class Employee {
   Employee &operator=(const Employee &rhs) = delete;
 
   /**
-   * @brief
+   * @brief Move Assignment
    *
    * @param rhs
    * @return Employee&

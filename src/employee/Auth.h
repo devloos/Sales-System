@@ -11,7 +11,7 @@
 #include "Employee.h"
 
 /**
- * @brief
+ * @brief Delegates work to Auth class method Verified
  *
  * @param username
  * @param social
@@ -27,7 +27,8 @@ class Auth {
   Auth() {}
 
   /**
-   * @brief
+   * @brief Handles verifying user login input, reads file and if credentials not found
+   * return false
    *
    * @param filename
    * @param username

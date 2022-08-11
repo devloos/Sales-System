@@ -14,6 +14,7 @@ void print() {
 }
 
 int main() {
+  std::thread worker;
   print()
 
       std::cin.get();

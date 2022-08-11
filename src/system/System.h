@@ -23,14 +23,15 @@ const uint8_t STRING_SIZE_BEFORE_NUM = 23;
 enum struct Option { kSignout = 0, kCheckout, kRecords, kInventory };
 
 /**
- * @brief
- *
- * @param employee
+ * @brief Declares and holds items, customers, and receipts data structures
+ * if user initializes system then all data structures get initialized
+ * handles self termination call
+ * @param employee - hold employee signed in
  */
 void init(const Employee &employee);
 
 /**
- * @brief
+ * @brief Terminates program and writes files to store data
  *
  * @param items
  * @param customers
@@ -42,7 +43,7 @@ void Terminate(
     const std::vector<Records::Receipt> &receipts);
 
 /**
- * @brief
+ * @brief User choice to init system
  *
  * @return true
  * @return false
@@ -50,28 +51,29 @@ void Terminate(
 bool MenuInit();
 
 /**
- * @brief
+ * @brief Initializes Customers
  *
  * @return std::map<std::string, Records::Customer>
  */
 std::map<std::string, Records::Customer> CustomersInit();
 
 /**
- * @brief
+ * @brief Initializes Receipts
  *
  * @return std::vector<Records::Receipt>
  */
 std::vector<Records::Receipt> ReceiptsInit();
 
 /**
- * @brief
+ * @brief Initializes Items
  *
  * @return std::unordered_map<std::string, float>
  */
 std::unordered_map<std::string, float> ItemsInit();
 
 /**
- * @brief
+ * @brief This is the main menu of the application every flows back and through here
+ * Delegates to Checkout, Records, and Inventory
  *
  * @param employee
  * @param items
@@ -84,7 +86,7 @@ void menu(
     std::vector<Records::Receipt> &receipts);
 
 /**
- * @brief
+ * @brief Overloaded bitwise operator to handle System::Option
  *
  * @param in
  * @param option

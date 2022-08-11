@@ -10,7 +10,7 @@ namespace Signin {
 enum struct Options { kExit = 0, kSignin };
 
 /**
- * @brief
+ * @brief User input for Login no validation done here
  *
  * @param username
  * @param social
@@ -18,7 +18,7 @@ enum struct Options { kExit = 0, kSignin };
 void input(std::string &username, uint32_t &social);
 
 /**
- * @brief
+ * @brief Overloaded >> bitwise operator for Option enum
  *
  * @param in
  * @param option

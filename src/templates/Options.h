@@ -3,7 +3,7 @@
 #include "../exceptions/Buffer.h"
 
 /**
- * @brief
+ * @brief was going to be used to pass in any menu option
  *
  * @tparam ENUM
  * @param in

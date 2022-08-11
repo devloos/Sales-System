@@ -6,10 +6,11 @@
 #include <string>
 
 namespace Validation {
+// Used for system sleep
 const int TWO_SECONDS = 2000000;
 
 /**
- * @brief
+ * @brief Logging system
  *
  * @param e
  */

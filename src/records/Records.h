@@ -25,7 +25,8 @@ const uint8_t THREE_SECONDS = 3;
 const int ONE_SECONDS = 1000000;
 
 /**
- * @brief
+ * @brief Handles Records Menu, and delegation to Print Receipts, Print Customers
+ * Add Customer, and Remove Customer
  *
  * @param employee
  * @param receipts
@@ -34,18 +35,24 @@ const int ONE_SECONDS = 1000000;
 void start(
     const Employee &employee, const std::vector<Receipt> &receipts,
     std::map<std::string, Customer> &customers);
+
 /**
- * @brief
+ * @brief Add new customer and generate uuid
  *
  * @param customers
  */
 void AddCustomer(std::map<std::string, Customer> &customers);
 
+/**
+ * @brief Remove Customer from data structure
+ *
+ * @param customers
+ */
 void RemoveCustomer(std::map<std::string, Customer> &customers);
 
 namespace Print {
 /**
- * @brief
+ * @brief Handles user input whether or not to print another five receipts
  *
  * @return true
  * @return false
@@ -53,14 +60,14 @@ namespace Print {
 bool AnotherFive();
 
 /**
- * @brief
+ * @brief Handles the printing of all receipts in the data structure
  *
  * @param receipts
  */
 void receipts(const std::vector<Receipt> &receipts);
 
 /**
- * @brief
+ * @brief Handles printing all customers in data structure
  *
  * @param customers
  */
@@ -68,7 +75,7 @@ void customers(const std::map<std::string, Customer> &customers);
 }  // namespace Print
 
 /**
- * @brief
+ * @brief Randomly generates uuid
  *
  * @return std::string
  */
