@@ -67,4 +67,4 @@ Step #4: `cmake ..`
 
 Step #5: `make`
 
-Step #6: `./main`
+Step #6: `./POS`
