@@ -38,7 +38,7 @@ Butternut Pumpkin
 Enter Item Name: B
 ```
 
-Receipts follow a strict format, if you manually enter a receipt be careful with formatting
+Receipts follow a strict format, if you manually enter a receipt into the .txt be careful with formatting
 
 For easy issue creation and readability, every exception thrown is a string.
 This string thrown will always be caught before the program terminates, so expect a message
