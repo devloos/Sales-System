@@ -1,5 +1,5 @@
-#ifndef utility_H_
-#define utility_H_
+#ifndef UTILITY_H_
+#define UTILITY_H_
 #include <unistd.h>
 
 #include <iostream>
@@ -17,4 +17,4 @@ const int TWO_SECONDS = 2000000;
 void Log(const std::string &e);
 }  // namespace Utility
 
-#endif  // utility_H_
+#endif  // UTILITY_H_
