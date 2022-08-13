@@ -10,7 +10,7 @@ namespace Signin {
 enum struct Options { kExit = 0, kSignin };
 
 /**
- * @brief User input for Login no validation done here
+ * @brief User input for Login no Utility done here
  *
  * @param username
  * @param social

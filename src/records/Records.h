@@ -14,7 +14,7 @@
 #include <vector>
 
 #include "../employee/Employee.h"
-#include "../exceptions/Validation.h"
+#include "../utility/Utility.h"
 #include "Customer.h"
 #include "Receipt.h"
 

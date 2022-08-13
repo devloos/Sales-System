@@ -148,14 +148,14 @@ void menu(
       }
       case System::Option::kInventory: {
         if (employee.getAccess() != Access::Level::kManagment) {
-          Validation::Log("ACCESS DENIED: MANAGEMENT ACCESS ONLY!\n");
+          Utility::Log("ACCESS DENIED: MANAGEMENT ACCESS ONLY!\n");
           break;
         }
         Inventory::start(items);
         break;
       }
       default: {
-        Validation::Log("INVALID OPTION! TRY AGAIN\n");
+        Utility::Log("INVALID OPTION! TRY AGAIN\n");
         break;
       }
     }

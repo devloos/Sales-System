@@ -35,7 +35,7 @@ void start(std::unordered_map<std::string, float> &items) {
         break;
       }
       default: {
-        Validation::Log("INVALID OPTION! TRY AGAIN\n");
+        Utility::Log("INVALID OPTION! TRY AGAIN\n");
         break;
       }
     }
@@ -65,7 +65,7 @@ void addItem(std::unordered_map<std::string, float> &items) {
   std::getline(std::cin, itemName);
 
   if (items.find(itemName) != items.end()) {
-    Validation::Log("ITEM ALREADY IN INVENTORY!!\n");
+    Utility::Log("ITEM ALREADY IN INVENTORY!!\n");
     return;
   }
 
@@ -99,7 +99,7 @@ void deleteItem(std::unordered_map<std::string, float> &items) {
   std::string result;
   if (!Find(items, "Delete Item", result)) return;
   items.erase(result);
-  Validation::Log("Item: " + result + " was successfully erased\n");
+  Utility::Log("Item: " + result + " was successfully erased\n");
 }
 
 void modifyItem(std::unordered_map<std::string, float> &items) {
@@ -110,7 +110,7 @@ void modifyItem(std::unordered_map<std::string, float> &items) {
   std::cin >> updatedPrice;
   Buffer::clean(std::cin);
   items.at(result) = updatedPrice;
-  Validation::Log(
+  Utility::Log(
       "Item: " + result + "'s price was updated to: " + std::to_string(updatedPrice) +
       " \n");
 }
@@ -133,7 +133,7 @@ bool Find(
     system("clear");
     BufferAutoCompleteNum = AutoComplete(result, items);
   } while (BufferAutoCompleteNum > 0);
-  Validation::Log("ITEM " + result + " NOT FOUND!!\n");
+  Utility::Log("ITEM " + result + " NOT FOUND!!\n");
   return false;
 }
 

@@ -10,7 +10,7 @@
 #include <utility>
 #include <vector>
 
-#include "../exceptions/Buffer.h"
+#include "../utility/Buffer.h"
 
 namespace Records {
 enum struct Issuers { kVisa = 0, kDiscovery, kMastercard, kAmericanExpress };

@@ -7,8 +7,8 @@ project(main)
 
 add_executable(
   ${PROJECT_NAME} src/core/Main.cpp src/employee/Auth.cpp src/employee/Employee.cpp
-  src/core/Application.cpp src/employee/Signin.cpp src/exceptions/Buffer.cpp
-  src/system/System.cpp src/inventory/Inventory.cpp src/exceptions/Validation.cpp
+  src/core/Application.cpp src/employee/Signin.cpp src/utility/Buffer.cpp
+  src/system/System.cpp src/inventory/Inventory.cpp src/utility/Utility.cpp
   src/records/Receipt.cpp src/records/Customer.cpp src/records/Records.cpp
   src/checkout/Checkout.cpp)
 target_include_directories(${PROJECT_NAME} PUBLIC /include)

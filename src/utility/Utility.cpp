@@ -1,9 +1,9 @@
-#include "Validation.h"
+#include "Utility.h"
 
-namespace Validation {
+namespace Utility {
 void Log(const std::string &e) {
   system("clear");
   std::cout << e;
   usleep(TWO_SECONDS);
 }
-}  // namespace Validation
+}  // namespace Utility

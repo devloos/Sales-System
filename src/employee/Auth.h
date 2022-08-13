@@ -7,7 +7,7 @@
 #include <string>
 #include <unordered_map>
 
-#include "../exceptions/Buffer.h"
+#include "../utility/Buffer.h"
 #include "Employee.h"
 
 /**

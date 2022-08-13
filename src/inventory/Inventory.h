@@ -7,8 +7,8 @@
 #include <string>
 #include <unordered_map>
 
-#include "../exceptions/Buffer.h"
-#include "../exceptions/Validation.h"
+#include "../utility/Buffer.h"
+#include "../utility/Utility.h"
 
 namespace Inventory {
 enum struct Option {
@@ -66,7 +66,7 @@ void deleteItem(std::unordered_map<std::string, float> &items);
 void modifyItem(std::unordered_map<std::string, float> &items);
 
 /**
- * @brief Handles validation that item exists in data structure
+ * @brief Handles Utility that item exists in data structure
  *
  * @param items
  * @param searchType

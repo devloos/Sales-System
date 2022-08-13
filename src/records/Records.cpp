@@ -29,7 +29,7 @@ void start(
       }
       case Options::kAddCustomer: {
         if (employee.getAccess() == Access::Level::kCashier) {
-          Validation::Log("MANAGMENT AND LEAD ACCESS ONLY!!\n");
+          Utility::Log("MANAGMENT AND LEAD ACCESS ONLY!!\n");
           break;
         }
         AddCustomer(customers);
@@ -37,14 +37,14 @@ void start(
       }
       case Options::kRemoveCustomer: {
         if (employee.getAccess() == Access::Level::kCashier) {
-          Validation::Log("MANAGMENT AND LEAD ACCESS ONLY!!\n");
+          Utility::Log("MANAGMENT AND LEAD ACCESS ONLY!!\n");
           break;
         }
         RemoveCustomer(customers);
         break;
       }
       default: {
-        Validation::Log("ENTER NUMBER IN RANGE\n");
+        Utility::Log("ENTER NUMBER IN RANGE\n");
         break;
       }
     }
@@ -76,7 +76,7 @@ void AddCustomer(std::map<std::string, Customer> &customers) {
     usleep(ONE_SECONDS);
   }
   customers.emplace(GenerateId(), Customer(name.c_str(), email.c_str()));
-  Validation::Log("CUSTOMER: " + name + " HAS BEEN ADDED!\n");
+  Utility::Log("CUSTOMER: " + name + " HAS BEEN ADDED!\n");
 }
 
 void RemoveCustomer(std::map<std::string, Customer> &customers) {
@@ -88,10 +88,10 @@ void RemoveCustomer(std::map<std::string, Customer> &customers) {
             << "UUID: ";
   std::getline(std::cin, UUID);
   if (!customers.erase(UUID)) {
-    Validation::Log("CUSTOMER WITH UUID: " + UUID + " WAS NOT FOUND\n");
+    Utility::Log("CUSTOMER WITH UUID: " + UUID + " WAS NOT FOUND\n");
     return;
   }
-  Validation::Log("CUSTOMER WITH UUID: " + UUID + " WAS ERASED\n");
+  Utility::Log("CUSTOMER WITH UUID: " + UUID + " WAS ERASED\n");
   return;
 }
 

@@ -1,11 +1,11 @@
-#ifndef VALIDATION_H_
-#define VALIDATION_H_
+#ifndef utility_H_
+#define utility_H_
 #include <unistd.h>
 
 #include <iostream>
 #include <string>
 
-namespace Validation {
+namespace Utility {
 // Used for system sleep
 const int TWO_SECONDS = 2000000;
 
@@ -15,6 +15,6 @@ const int TWO_SECONDS = 2000000;
  * @param e
  */
 void Log(const std::string &e);
-}  // namespace Validation
+}  // namespace Utility
 
-#endif  // VALIDATION_H_
+#endif  // utility_H_

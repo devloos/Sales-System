@@ -2,8 +2,8 @@
 
 #include <unistd.h>
 
-#include "../exceptions/Buffer.h"
 #include "../system/System.h"
+#include "../utility/Buffer.h"
 
 namespace Application {
 void start() {

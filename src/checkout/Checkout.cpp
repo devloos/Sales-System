@@ -28,12 +28,12 @@ void start(
         if (employee.getAccess() == Access::Level::kManagment) {
           Inventory::modifyItem(items);
         } else {
-          Validation::Log("MANGMENT ACCESS ONLY!\n");
+          Utility::Log("MANGMENT ACCESS ONLY!\n");
         }
         break;
       }
       default: {
-        Validation::Log("INPUT NOT IN RANGE TRY AGAIN!\n");
+        Utility::Log("INPUT NOT IN RANGE TRY AGAIN!\n");
         break;
       }
     }
@@ -85,7 +85,7 @@ void Purchase(
       }
       case Options::kDiscount: {
         if (employee.getAccess() == Access::Level::kCashier) {
-          Validation::Log("MANGMENT AND LEAD ACCESS ONLY!!!\n");
+          Utility::Log("MANGMENT AND LEAD ACCESS ONLY!!!\n");
           break;
         }
         Handle::Discount(Subtotal);
@@ -98,7 +98,7 @@ void Purchase(
         return;
       }
       default: {
-        Validation::Log("INPUT NOT IN RANGE TRY AGAIN!!\n");
+        Utility::Log("INPUT NOT IN RANGE TRY AGAIN!!\n");
         break;
       }
     }
@@ -182,7 +182,7 @@ void Discount(float &Subtotal) {
   Buffer::clean(std::cin);
 
   if (discount > Subtotal) {
-    Validation::Log("INVALID DISCOUNT AMOUNT!!!\n");
+    Utility::Log("INVALID DISCOUNT AMOUNT!!!\n");
     return;
   }
 
@@ -213,7 +213,7 @@ void ExistingCustomer(
 }
 
 void NewCustomer(Checkout::CurrCustomer &customer) {
-  Validation::Log("YOU GOT A NEW CUSTOMER!!!\n");
+  Utility::Log("YOU GOT A NEW CUSTOMER!!!\n");
   system("clear");
   std::cout << std::setw(37) << "DETAILS OF NEW CUSTOMER\n"
             << "------------------------------------------\n"

@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "../exceptions/Buffer.h"
+#include "../utility/Buffer.h"
 
 /**
  * @brief was going to be used to pass in any menu option

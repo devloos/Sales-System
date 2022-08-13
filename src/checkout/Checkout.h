@@ -13,11 +13,11 @@
 #include <vector>
 
 #include "../employee/Employee.h"
-#include "../exceptions/Buffer.h"
 #include "../inventory/Inventory.h"
 #include "../records/Customer.h"
 #include "../records/Receipt.h"
 #include "../records/Records.h"
+#include "../utility/Buffer.h"
 
 #define PURCHASE 1
 #define MODIFY 2

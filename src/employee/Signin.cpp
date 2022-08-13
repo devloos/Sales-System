@@ -1,6 +1,6 @@
 #include "Signin.h"
 
-#include "../exceptions/Buffer.h"
+#include "../utility/Buffer.h"
 
 namespace Signin {
 void input(std::string &username, uint32_t &social) {
