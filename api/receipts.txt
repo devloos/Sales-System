@@ -1,4 +1,4 @@
-   Number of receipts: 18
+   Number of receipts: 21
    Carlos Sales System
 4231 NOWHERE BLVD WHERE, NO
 ---------------------------
@@ -389,20 +389,79 @@ TOTAL:          $ 491.32
 ---------------------------
 08/13/22           15:45PM
 ---------------------------
-Red Pepper - 28.97
-Brown Flour - 43.99
-Cucumber - 4.69
-Oat Flour - 40.60
-Horseradish - 29.91
-Lemon - 10.13
-Goat Milk - 19.12
-Oatmeal - 2.53
-Wheat - 2.97
+Red Pepper  - 28.97
+Brown Flour  - 43.99
+Cucumber  - 4.69
+Oat Flour  - 40.60
+Horseradish  - 29.91
+Lemon  - 10.13
+Goat Milk  - 19.12
+Oatmeal  - 2.53
+Wheat  - 2.97
 
 PAYMENT     -    AMEX 2831
 ---------------------------
 SUBTOTAL:       $ 182.91
 TAX:            $ 14.18
 TOTAL:          $ 197.09
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+08/21/22           22:33PM
+---------------------------
+Tea  - 24.60
+Rockmelon  - 31.30
+Goat Milk  - 19.12
+Wheat  - 2.97
+Butternut Lettuce  - 17.37
+Spelt  - 11.33
+File Powder  - 17.90
+Besan  - 39.23
+Rice Syrup  - 8.49
+
+PAYMENT     -    AMEX 8065
+---------------------------
+SUBTOTAL:       $ 172.31
+TAX:            $ 13.35
+TOTAL:          $ 185.66
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+08/21/22           22:35PM
+---------------------------
+Eggplant - 28.80
+Omega Spread - 11.57
+Stevia - 39.57
+Horseradish - 29.91
+
+PAYMENT     -    Visa 867
+---------------------------
+SUBTOTAL:       $ 109.85
+TAX:            $ 8.51
+TOTAL:          $ 118.36
+
+   PLEASE COME AGAIN!!
+   Carlos Sales System
+4231 NOWHERE BLVD WHERE, NO
+---------------------------
+08/21/22           22:35PM
+---------------------------
+Rice Flour - 50.78
+Persimmon - 29.33
+File Powder - 17.90
+Red Pepper - 28.97
+Kokam - 22.28
+Paprik - 10.31
+Rockmelon - 31.30
+
+PAYMENT     -    AMEX 6457
+---------------------------
+SUBTOTAL:       $ 190.87
+TAX:            $ 14.79
+TOTAL:          $ 205.66
 
    PLEASE COME AGAIN!!

@@ -4,20 +4,18 @@ Custard Apples
 27.94
 Buttermilk
 5.23
-Corn Tortilla
-7.62
+File Powder
+17.9
 Dill
 6.4
 Feijoa
 46.12
-File Powder
-17.9
 Red Pepper
 28.97
-Cashews
-17.35
-Persimmon
-29.33
+Corn Tortilla
+7.62
+Blue Cheese
+14.38
 Hijiki
 6.82
 Camomile
@@ -26,8 +24,10 @@ Redfish
 49.81
 English Spinach
 36.6
-Blue Cheese
-14.38
+Persimmon
+29.33
+Cashews
+17.35
 Stevia
 39.57
 Oat Flour
@@ -72,8 +72,6 @@ Kokam
 22.28
 Butternut Lettuce
 17.37
-Bran
-45.9
 Beef Stock
 3.66
 Besan
@@ -113,7 +111,7 @@ Oatmeal
 Pomegranate
 13.67
 Cavalo
-45.78
+13.54
 Marigold
 16.94
 Peppercorns
@@ -160,19 +158,19 @@ Lemon
 10.13
 Shiitake Mushrooms
 24.58
-Kumera
-30.49
-Pistachio Nut
-44.36
-Quinoa
-43.65
-Paprik
-10.31
 Lotus Root
 28.29
-Rice Syrup
-8.49
-Star Fruit
-16.14
+Quinoa
+43.65
+Pistachio Nut
+44.36
+Paprik
+10.31
+Kumera
+30.49
 Oysters
 41.65
+Star Fruit
+16.14
+Rice Syrup
+8.49
