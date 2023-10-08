@@ -433,10 +433,10 @@ TOTAL:          $ 185.66
 ---------------------------
 08/21/22           22:35PM
 ---------------------------
-Eggplant - 28.80
-Omega Spread - 11.57
-Stevia - 39.57
-Horseradish - 29.91
+Eggplant  - 28.80
+Omega Spread  - 11.57
+Stevia  - 39.57
+Horseradish  - 29.91
 
 PAYMENT     -    Visa 867
 ---------------------------
@@ -450,13 +450,13 @@ TOTAL:          $ 118.36
 ---------------------------
 08/21/22           22:35PM
 ---------------------------
-Rice Flour - 50.78
-Persimmon - 29.33
-File Powder - 17.90
-Red Pepper - 28.97
-Kokam - 22.28
-Paprik - 10.31
-Rockmelon - 31.30
+Rice Flour  - 50.78
+Persimmon  - 29.33
+File Powder  - 17.90
+Red Pepper  - 28.97
+Kokam  - 22.28
+Paprik  - 10.31
+Rockmelon  - 31.30
 
 PAYMENT     -    AMEX 6457
 ---------------------------

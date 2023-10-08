@@ -10,12 +10,10 @@ Dill
 6.4
 Feijoa
 46.12
-Red Pepper
-28.97
 Corn Tortilla
 7.62
-Blue Cheese
-14.38
+Red Pepper
+28.97
 Hijiki
 6.82
 Camomile
@@ -28,6 +26,8 @@ Persimmon
 29.33
 Cashews
 17.35
+Blue Cheese
+14.38
 Stevia
 39.57
 Oat Flour
@@ -52,6 +52,10 @@ Silverbeet
 17.34
 Cherries
 45.8
+Ham
+6.26
+Rockmelon
+31.3
 Mahi Mahi
 36.98
 Mackerel
@@ -76,10 +80,6 @@ Beef Stock
 3.66
 Besan
 39.23
-Spelt
-11.33
-Bok Choy
-18.95
 Eggplant
 28.8
 Potato Flour
@@ -90,10 +90,6 @@ Goat Milk
 19.12
 Cornichons
 23.66
-Ham
-6.26
-Rockmelon
-31.3
 Slivered Almonds
 14.7
 Kidney Beans
@@ -104,6 +100,10 @@ Harissa
 2.53
 Horseradish
 29.91
+Bok Choy
+18.95
+Spelt
+11.33
 Wheatgrass Juice
 36.13
 Oatmeal
@@ -158,19 +158,19 @@ Lemon
 10.13
 Shiitake Mushrooms
 24.58
-Lotus Root
-28.29
-Quinoa
-43.65
-Pistachio Nut
-44.36
-Paprik
-10.31
 Kumera
 30.49
-Oysters
-41.65
-Star Fruit
-16.14
+Pistachio Nut
+44.36
+Quinoa
+43.65
+Paprik
+10.31
+Lotus Root
+28.29
 Rice Syrup
 8.49
+Star Fruit
+16.14
+Oysters
+41.65
