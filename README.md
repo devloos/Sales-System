@@ -45,7 +45,7 @@ This string thrown will always be caught before the program terminates, so expec
 
 if any errors (of course besides any thrown by STL)
 
-NO EXTERNAL LIBRARIES Only prerequisite
+NO EXTERNAL LIBRARIES, Only prerequisite
 - CMake
 
 Finally enjoy
